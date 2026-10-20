@@ -54,7 +54,8 @@ def measured(cmd, folder, timeout):
 
 
 def quast(assemblies, reference, out):
-    cmd = [sys.executable, str(ROOT/'vendor/quast/quast.py'), *map(str, assemblies),
+    interpreter = json.loads((ROOT/'reports/setup/build.json').read_text())['quast_python']
+    cmd = [interpreter, str(ROOT/'vendor/quast/quast.py'), *map(str, assemblies),
            '-r', str(reference), '-o', str(out), '-t', '1', '-m', '500',
            '--no-plots', '--no-html', '--no-icarus', '--no-sv', '--no-read-stats', '--strict-NA']
     out.parent.mkdir(parents=True, exist_ok=True)

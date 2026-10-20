@@ -25,7 +25,7 @@ One development input and two frozen heldouts test basic distribution shifts. Th
 - `python3 scripts/verify.py reports/experiment` recomputes the recorded verdict from archived evidence without a build.
 - `python3 tools/discover.pyz validate .` checks the local Discovery records.
 
-Bootstrap requires Git, Python ≥3.9, C/C++ compiler, make, zlib development headers, 10 GiB free before builds, and network access to the pinned GitHub repositories and Discovery helper. Working space is expected below 2 GiB. On this ARM Mac, Hifiasm uses a source-built x86_64 executable under Rosetta; minimap2 is built natively. Linux/x86 support is provided by the harness but not validated by the initialization run. No committed upstream executable is run; the optional simplejson extension is removed locally. No optional gene/KMC/read-mapping tools are enabled.
+Bootstrap requires Git, Python ≥3.9, a QUAST interpreter with distutils (Python 3.9–3.11; detected automatically or selected with QUAST_PYTHON), C/C++ compiler, make, zlib development headers, 10 GiB free before builds, and network access to the pinned GitHub repositories and Discovery helper. Working space is expected below 2 GiB. On this ARM Mac, Hifiasm uses a source-built x86_64 executable under Rosetta; minimap2 is built natively. Linux/x86 support is provided by the harness but not validated by the initialization run. No committed upstream executable is run; the optional simplejson extension is removed locally. No optional gene/KMC/read-mapping tools are enabled.
 
 ## Short-session contribution tracks
 

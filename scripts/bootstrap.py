@@ -27,6 +27,16 @@ def main():
         p.error('Confirm screened execution permission using --allow-unsandboxed, or run sandboxed with --sandboxed')
     if shutil.disk_usage(ROOT).free < 10 * 1024**3:
         raise SystemExit('Need at least 10 GiB free before build')
+    candidates = [os.environ.get('QUAST_PYTHON'), sys.executable, '/usr/bin/python3']
+    quast_python = None
+    for interpreter in candidates:
+        if interpreter and Path(interpreter).exists() and subprocess.run(
+                [interpreter, '-c', 'from distutils.version import LooseVersion'],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0:
+            quast_python = interpreter
+            break
+    if quast_python is None:
+        raise SystemExit('Pinned QUAST requires distutils: set QUAST_PYTHON to a Python 3.9–3.11 interpreter, then rerun bootstrap.')
     locks = json.loads(Path('configs/tools.lock.json').read_text())
     for name in ('vendor', 'tools', 'reports/setup', 'research'):
         Path(name).mkdir(parents=True, exist_ok=True)
@@ -72,6 +82,8 @@ def main():
     provenance = {
         'platform': platform.platform(), 'machine': platform.machine(), 'python': sys.version,
         'translated_hifiasm': translated, 'commands': commands, 'pins': locks,
+        'quast_python': quast_python,
+        'quast_python_version': subprocess.check_output([quast_python, '--version'], text=True).strip(),
         'compiler': subprocess.check_output(['c++', '--version'], text=True),
         'build_seconds': time.time() - started,
         'binaries': {s: hashlib.sha256(Path(s).read_bytes()).hexdigest() for s in binaries},

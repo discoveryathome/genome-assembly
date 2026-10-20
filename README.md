@@ -6,7 +6,7 @@ The established research frontier includes [Hifiasm phased assembly graphs](http
 
 ## Run
 
-Requires Python 3.9+, Git, make, C/C++ compiler and zlib headers. macOS ARM uses installed Rosetta for source-built x86 Hifiasm. Linux x86 is supported in code but needs independent validation. Keep 10 GiB free before builds; working files are expected below 2 GiB. All downloads/builds remain in this directory.
+Requires Python 3.9+, Git, make, C/C++ compiler and zlib headers. Pinned QUAST also needs a Python interpreter with `distutils` (normally Python 3.9–3.11); bootstrap detects one or accepts `QUAST_PYTHON=/path/to/python`. macOS ARM uses installed Rosetta for source-built x86 Hifiasm. Linux x86 is supported in code but needs independent validation. Keep 10 GiB free before builds; working files are expected below 2 GiB. All downloads/builds remain in this directory.
 
 ```sh
 # First review the source-screen reports. The current owner authorized unsandboxed execution.
