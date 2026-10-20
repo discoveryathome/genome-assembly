@@ -1,0 +1,18 @@
+{
+  "trial_started_utc": "2026-10-20T20:08:08Z",
+  "trial_finished_utc": "2026-10-20T20:50:34Z",
+  "elapsed_seconds": 2546,
+  "elapsed_minutes": 42.43333333333333,
+  "verified_source_commit": "9243b586f0dbb2a951d3bf41b34ef543354d6d0d",
+  "fresh_clone_python": "Python 3.9.6",
+  "fresh_clone_command": [
+    "/usr/bin/python3",
+    "scripts/verify.py",
+    "reports/experiment",
+    "--baseline",
+    "reports/experiment/baseline.json"
+  ],
+  "fresh_clone_result": "PASS: regenerated inputs, raw evidence, controls, A/A stability, derived decisions, pinned unchanged baseline",
+  "independent_verification": false,
+  "note": "Author ran a separate local checkout; no independent reviewer or fresh assembler build/replay in that checkout. Initial screened source build and full benchmark ran in the primary pilot."
+}

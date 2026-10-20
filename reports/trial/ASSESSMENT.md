@@ -4,7 +4,7 @@
 
 ## What this trial tests
 
-The contributor session began at 20:08:08 UTC on 2026-10-20. Scaffolding, shallow source clones and the literature brief existed beforehand and are not credited as work accomplished in this time box. This was a trial on a prepared pilot, not a blind orientation test of a fresh contributor. The task was assigned explicitly; there was no random task selection. The owner authorized screened local builds and will maintain the MIT pilot. Nothing was published.
+The contributor session ran from 20:08:08 to 20:50:34 UTC on 2026-10-20: **42 minutes 26 seconds**, including setup, experiment, verification and assessment. Scaffolding, shallow source clones and the literature brief existed beforehand and are not credited as work accomplished in this time box. This was a trial on a prepared pilot, not a blind orientation test of a fresh contributor. The task was assigned explicitly; there was no random task selection. The owner authorized screened local builds and will maintain the MIT pilot. Nothing was published.
 
 The bounded target is minimizer occurrence indexing and downstream overlap seeding/chaining, not an entire human assembly pipeline. The only candidate change is Hifiasm's existing minimizer window, 51 to 101. Both arms run the identical pinned binary with one thread and the same other arguments. Increasing the window samples fewer seeds and can lose sensitivity. This is a quality-risking parameter optimization, not a new algorithm or a proof of exactness.
 
@@ -57,3 +57,5 @@ If these checks succeed, feature the scoped challenge as “make genome reconstr
 ## Evidence and verification limits
 
 The raw reports, commands, source snapshots, binary/input hashes and derived summaries are archived. Offline verification regenerates inputs, checks evidence integrity, recomputes quality/resource decisions and checks output identity. It does not authenticate timings independently or prove arbitrary-input equivalence. A fresh local clone can recheck these computations; independent full replay and maintainer scientific review remain outstanding. No external acceptance is implied by local tests passing.
+
+The final source at commit `9243b586f0dbb2a951d3bf41b34ef543354d6d0d` passed the full offline check, input regeneration and explicit pinned-baseline comparison from a fresh local checkout under Python 3.9.6. All four task-card first steps passed; deliberate evidence corruption and a false baseline hash were rejected. Discovery validation reports conformant; the missing external coordination channel is intentional in LOCAL mode. These are author-run checks, not independent scientific review. Logs and exact duration are in CHECKS.json, FINAL-FRESH-CLONE.log and COMPLETION.json.

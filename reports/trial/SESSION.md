@@ -26,3 +26,14 @@ Success criteria for featured suitability: a verified useful result within the t
 20:46 — All 42 measured assemblies and six warmups completed. All cases pass quality/memory and finite output-identity checks; all fail performance screening. Packaged pinned baseline and raw-file hash inventory. Offline verifier passed, including deterministic input regeneration. CPU reductions 9.88%, 6.76%, 5.99% remain exploratory.
 
 20:49 — All four task-card first steps and Discovery validation passed. Deliberate FASTA evidence corruption was rejected; the original bytes were restored and hash checked. Fresh local clone verification under Python 3.9.6 regenerated the inputs and passed. Added explicit full-replay comparison against the archived unchanged baseline, including every GFA; a deliberately false baseline hash is rejected.
+
+20:50:34 — Trial finished after 42 minutes 26 seconds. Final source verified from a fresh local checkout under Python 3.9.6, including unchanged-baseline identity. All card first steps and Discovery structural validation passed. Preview server stopped; local verification clones removed after logs were preserved. No performance promotion or external publication.
+
+```discover
+{"v":0,"kind":"done","task":"overlap-seeding-01","scope":"30\u201360 minute local contributor trial and featured-pilot suitability assessment","base":"e79fd3f02f8f4e1b771bd13b3b9c7afc11a4bbc3","artifact":"reports/trial/ASSESSMENT.md","posted_at":"2026-10-20T20:50:34Z"}
+```
+
+```discover
+{"v":0,"kind":"handoff","task":"overlap-seeding-01","scope":"Native profiling and exact differential fixture for one overlap-seeding kernel","base":"9243b586f0dbb2a951d3bf41b34ef543354d6d0d","posted_at":"2026-10-20T20:50:34Z","request":{"question":"Can a profiled seed/chaining operation become a tractable source-level improvement challenge?","first_step":"Read reports/trial/NEXT-SESSION.md and run python3 scripts/first_step.py overlap-seeding","success_test":"Reproducible native profile, stage cost and an exact differential trace fixture; no unsupported performance promotion","track":"overlap-seeding","est_minutes":45}}
+```
+
