@@ -87,7 +87,7 @@ def assemble(ds, window, folder, config):
                   all_gfa_hashes={p.name: sha(p) for p in sorted(folder.glob('*.gfa'))},
                   # Raw timestamps are cumulative since start, never sum them as phase durations.
                   phase_markers=re.findall(r'\[M::([^\]]+)\][^\n]*', text),
-                  seed_index_counts=[int(x) for x in re.findall(r'collected (\d+) minimizers', text)],
+                  seed_index_counts=[int(x) for x in re.findall(r'indexed (\d+) positions', text)],
                   folder=str(folder.relative_to(ROOT)))
     # Quality every observed output; no assumption that repetitions match.
     quality = quast([fasta.resolve()], (ROOT/'data'/ds['id']/'reference.fa').resolve(), folder/'quast')
@@ -133,6 +133,7 @@ def summarize(records, config):
                 group = {r['arm']: r for r in runs if r['phase'] == phase and r['pair'] == pair}
                 a, b = group['A'], group['B']
                 dest.append({'speedup': a['wall_seconds']/b['wall_seconds'],
+                             'cpu_speedup': (a['user_seconds'] + a['system_seconds']) / (b['user_seconds'] + b['system_seconds']),
                              'rss_ratio': b['peak_rss_bytes']/a['peak_rss_bytes'],
                              'exact_primary': a['hashes'] == b['hashes'],
                              'exact_all_gfa': a['all_gfa_hashes'] == b['all_gfa_hashes'],
@@ -146,6 +147,7 @@ def summarize(records, config):
         performance_ok = speed >= config['gates']['minimum_speedup'] and speed - 1 > 2*noise and ci[0] > 1
         row = {'dataset': ds['id'], 'split': ds['split'], 'aa_pairs': aa, 'ab_pairs': ab,
                'median_speedup': speed, 'paired_bootstrap_95pct': ci,
+               'median_cpu_speedup': statistics.median(p['cpu_speedup'] for p in ab),
                'max_aa_relative_deviation': noise, 'aa_stable': stable,
                'quality_pass': quality_ok, 'memory_pass': memory_ok, 'performance_pass': performance_ok,
                'candidate_accepted': stable and quality_ok and memory_ok and performance_ok,
@@ -154,6 +156,7 @@ def summarize(records, config):
         for arm in ['A', 'B']:
             data = [r for r in runs if r['phase'] == 'ab' and r['arm'] == arm]
             row[arm] = {'median_wall_seconds': statistics.median(r['wall_seconds'] for r in data),
+                        'median_cpu_seconds': statistics.median(r['user_seconds'] + r['system_seconds'] for r in data),
                         'median_peak_rss_bytes': statistics.median(r['peak_rss_bytes'] for r in data),
                         'quality': data[0]['quality'], 'seed_index_counts': data[0]['seed_index_counts']}
         summaries.append(row)
@@ -163,11 +166,11 @@ def summarize(records, config):
 def report(out, summaries):
     lines = ['# Controlled minimizer-window experiment', '',
              'LOCAL-ONLY, author checked. Window 51 → 101, same binary and inputs. See environment.json and commands for build/runtime provenance.', '',
-             '| Dataset | Split | A seconds | B seconds | Speedup | RSS A/B MiB | Quality | Exact primary GFA/FASTA | Accepted |',
-             '|---|---|---:|---:|---:|---:|---|---|---|']
+             '| Dataset | Split | A seconds | B seconds | Wall speedup | CPU speedup | RSS A/B MiB | Quality | Exact primary GFA/FASTA | Screening gate |',
+             '|---|---|---:|---:|---:|---:|---:|---|---|---|']
     for s in summaries:
         a, b = s['A'], s['B']
-        lines.append(f"| {s['dataset']} | {s['split']} | {a['median_wall_seconds']:.3f} | {b['median_wall_seconds']:.3f} | {s['median_speedup']:.3f}× | {a['median_peak_rss_bytes']/2**20:.1f}/{b['median_peak_rss_bytes']/2**20:.1f} | {s['quality_pass']} | {s['exact_primary_all_pairs']} | {s['candidate_accepted']} |")
+        lines.append(f"| {s['dataset']} | {s['split']} | {a['median_wall_seconds']:.3f} | {b['median_wall_seconds']:.3f} | {s['median_speedup']:.3f}× | {s['median_cpu_speedup']:.3f}× | {a['median_peak_rss_bytes']/2**20:.1f}/{b['median_peak_rss_bytes']/2**20:.1f} | {s['quality_pass']} | {s['exact_primary_all_pairs']} | {s['candidate_accepted']} |")
     lines += ['', '## Quality (first A/B pair; every repetition is checked)', '',
               '| Dataset/arm | Extensive/local errors | Genome % | Duplication | N50 | NG50 | NGA50 | Contigs | Mismatch/indel per 100kb |',
               '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
@@ -177,7 +180,7 @@ def report(out, summaries):
             lines.append(f"| {s['dataset']}/{arm} | {q['misassemblies']:.0f}/{q['local_misassemblies']:.0f} | {q['genome_fraction']:.3f} | {q['duplication_ratio']:.3f} | {q['n50']:.0f} | {q['ng50']:.0f} | {q['nga50']:.0f} | {q['contigs']:.0f} | {q['mismatches_per_100kb']}/{q['indels_per_100kb']} |")
     lines += ['', '## Interpretation limits', '',
               'A/A output equality is required. Acceptance additionally requires all quality gates, ≥10% median speedup, gain exceeding twice the maximum A/A deviation, bootstrap lower bound >1, and median peak RSS ratio ≤1.05. Five pairs give only coarse uncertainty estimates; this is a pilot, not a significance claim.', '',
-              'Timing is whole-process assembly time, including input and output; QUAST is outside the timed region. RSS is the OS per-process high-water mark including Rosetta where applicable. File caches are warm; assembly intermediate caches are never reused. One warmup per arm is excluded. No concurrent builds or pilot benchmarks run. External machine activity is recorded as load averages but not controlled.', '',
+              'Timing is whole-process assembly time, including input and output; QUAST is outside the timed region. RSS is the OS per-process high-water mark including Rosetta where applicable. File caches are warm; assembly intermediate caches are never reused. One warmup per arm is excluded. No concurrent builds or pilot benchmarks run. External machine activity is recorded as load averages but not controlled. CPU ratios are additional diagnostics, not substitutes for an idle-machine replay. See reports/trial/HOST-CAVEAT.md for the initialization host: substantial competing activity was observed. Screening acceptance does not constitute a confirmed performance claim.', '',
               'The candidate changes seed selection and is a quality-risking parameter optimization. Byte equality on a finite set does not prove universal equivalence. All GFA equality is tracked separately from primary FASTA/GFA equality; binary intermediate identity is not claimed. No real biological, diploid or human generalization is established.', '',
               'Completeness means reference base coverage here, not gene/BUSCO completeness. Synthetic reads include simplistic substitutions and indels. Held-out sets were frozen before candidate evaluation; after this report they are regression datasets, requiring new holdouts for subsequent tuning.']
     (out/'REPORT.md').write_text('\n'.join(lines) + '\n')
