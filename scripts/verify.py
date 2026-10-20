@@ -19,7 +19,7 @@ def verify(out, regenerate=True):
     locks = json.loads((ROOT/'configs/tools.lock.json').read_text())
     assert environment['build']['pins'] == locks, 'Dependency pin mismatch'
     for key, filename in [('generator_sha256', 'generate.py'), ('harness_sha256', 'benchmark.py'), ('quality_sha256', 'quality.py')]:
-        assert environment[key] == sha(ROOT/'scripts'/filename), 'Source drift: ' + filename
+        assert environment[key] == sha(out/'source'/filename), 'Archived source drift: ' + filename
     records = json.loads((out/'runs.json').read_text())
     expected_count = len(config['datasets']) * 2 * (config['aa_pairs'] + config['ab_pairs'])
     assert len(records) == expected_count, 'Missing or duplicate benchmark runs'

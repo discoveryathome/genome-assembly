@@ -207,6 +207,9 @@ def main():
                    'harness_sha256': sha(ROOT/'scripts/benchmark.py'),
                    'quality_sha256': sha(ROOT/'scripts/quality.py'),
                    'build': json.loads(Path('reports/setup/build.json').read_text()), 'configuration': config}
+    (out/'source').mkdir()
+    for name in ('benchmark.py', 'generate.py', 'quality.py', 'verify.py'):
+        (out/'source'/name).write_bytes((ROOT/'scripts'/name).read_bytes())
     write_json(out/'environment.json', environment)
     control(out/'verifier-control', config)
     records = []
