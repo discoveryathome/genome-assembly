@@ -1,0 +1,2 @@
+EXPECTED REJECTION of deliberately false baseline hash
+FAIL: Baseline correctness/output identity differs

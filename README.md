@@ -16,7 +16,7 @@ python3 scripts/bootstrap.py --allow-unsandboxed
 python3 scripts/test_quality.py
 python3 scripts/benchmark.py --control-only --out reports/control-replay
 python3 scripts/benchmark.py --out reports/replay-001
-python3 scripts/verify.py reports/replay-001
+python3 scripts/verify.py reports/replay-001 --baseline reports/experiment/baseline.json
 ```
 
 Inside a sandbox, substitute `--sandboxed` for `--allow-unsandboxed`. The harness refuses to overwrite an experiment directory. It never reuses assembly intermediate caches. Each run has commands, logs, per-process resources, GFA/FASTA, and QUAST TSV reports. Build provenance records compiler flags and binary hashes. Runtime excludes QUAST evaluation.
@@ -41,3 +41,5 @@ For the larger, not yet fully measured tier, pass `--config configs/experiment.j
 The offline verifier checks artifact integrity, regenerated inputs, recorded quality and computed decisions. It cannot independently authenticate elapsed time or prove an arbitrary-input exactness claim. Full replay rebuilds and measures the assembler; allow additional time for source compilation and host load.
 
 `discover validate .` checks structure, not scientific acceptance. The missing external coordination-channel convention is intentional in LOCAL mode; the session record and result package contain the local claim and handoffs.
+
+The `--baseline` replay option additionally requires the unchanged arm to reproduce the archived quality and primary/all-GFA hashes. A mismatch on another platform must be investigated and reported, not silently rebased. The larger tier has different datasets and must establish its own baseline.

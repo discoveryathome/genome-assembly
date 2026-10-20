@@ -24,3 +24,5 @@ Success criteria for featured suitability: a verified useful result within the t
 20:42 — Repeat-rich heldout completed with byte-identical primary/all-GFA outputs and equal quality in all five candidate pairs. Median paired CPU speedup 1.0725; wall-time screening failed. GC/error-shifted heldout started. The candidate was not retuned.
 
 20:46 — All 42 measured assemblies and six warmups completed. All cases pass quality/memory and finite output-identity checks; all fail performance screening. Packaged pinned baseline and raw-file hash inventory. Offline verifier passed, including deterministic input regeneration. CPU reductions 9.88%, 6.76%, 5.99% remain exploratory.
+
+20:49 — All four task-card first steps and Discovery validation passed. Deliberate FASTA evidence corruption was rejected; the original bytes were restored and hash checked. Fresh local clone verification under Python 3.9.6 regenerated the inputs and passed. Added explicit full-replay comparison against the archived unchanged baseline, including every GFA; a deliberately false baseline hash is rejected.

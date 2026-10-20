@@ -1,0 +1,4 @@
+PASS: pinned inputs, raw artifacts, QUAST controls, A/A stability and derived verdicts
+starter_dev_balanced quality=True speedup=1.381 accepted=False
+starter_holdout_repeat quality=True speedup=1.131 accepted=False
+starter_holdout_gc_error quality=True speedup=1.069 accepted=False

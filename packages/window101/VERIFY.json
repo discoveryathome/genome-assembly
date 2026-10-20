@@ -31,7 +31,9 @@
     [
       "python3",
       "scripts/verify.py",
-      "reports/replay-001"
+      "reports/replay-001",
+      "--baseline",
+      "reports/experiment/baseline.json"
     ]
   ],
   "permission_note": "Unsandboxed flag requires owner permission; this session already has it. Use --sandboxed in an actual sandbox. No external posts.",

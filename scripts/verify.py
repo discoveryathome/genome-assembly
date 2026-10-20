@@ -11,7 +11,7 @@ from quality import parse_quast, quality_gate
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def verify(out, regenerate=True):
+def verify(out, regenerate=True, baseline_reference=None):
     inventory = out/'SHA256.json'
     if inventory.exists():
         for relative, expected in json.loads(inventory.read_text()).items():
@@ -73,12 +73,15 @@ def verify(out, regenerate=True):
             for ds in config['datasets']:
                 metadata = generate(ds, Path(tmp)/ds['id'])
                 assert metadata == json.loads((out/(ds['id']+'-inputs.json')).read_text()), 'Input regeneration mismatch'
-    baseline = out/'baseline.json'
+    baseline = baseline_reference or out/'baseline.json'
+    if baseline_reference is not None:
+        assert baseline.is_file(), 'Reference baseline missing'
     if baseline.exists():
         pins = json.loads(baseline.read_text())
+        assert set(pins) == {ds['id'] for ds in config['datasets']}, 'Reference baseline dataset mismatch'
         for ds in config['datasets']:
             runs = [r for r in records if r['dataset'] == ds['id'] and r['window'] == 51]
-            assert all(r['hashes'] == pins[ds['id']]['hashes'] and r['quality'] == pins[ds['id']]['quality'] for r in runs)
+            assert all(r['hashes'] == pins[ds['id']]['hashes'] and r['quality'] == pins[ds['id']]['quality'] and r['all_gfa_hashes'] == pins[ds['id']]['all_gfa_hashes'] for r in runs), 'Baseline correctness/output identity differs'
     print('PASS: pinned inputs, raw artifacts, QUAST controls, A/A stability and derived verdicts')
     for s in derived:
         print(s['dataset'], 'quality=' + str(s['quality_pass']), 'speedup=' + format(s['median_speedup'], '.3f'), 'accepted=' + str(s['candidate_accepted']))
@@ -88,8 +91,9 @@ if __name__ == '__main__':
     p = argparse.ArgumentParser()
     p.add_argument('report', nargs='?', default='reports/experiment')
     p.add_argument('--skip-regenerate', action='store_true')
+    p.add_argument('--baseline', help='Also require unchanged-arm correctness/output identity against this pinned baseline')
     args = p.parse_args()
     try:
-        verify((ROOT/args.report).resolve(), regenerate=not args.skip_regenerate)
+        verify((ROOT/args.report).resolve(), regenerate=not args.skip_regenerate, baseline_reference=(ROOT/args.baseline).resolve() if args.baseline else None)
     except (AssertionError, ValueError, KeyError, FileNotFoundError) as exc:
         raise SystemExit('FAIL: ' + str(exc))
