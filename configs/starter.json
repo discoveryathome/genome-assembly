@@ -1,0 +1,75 @@
+{
+  "schema": "genome-pilot-experiment/v1",
+  "question": "Does a wider minimizer window reduce overlap-seeding work without measured quality loss?",
+  "frozen_candidate": {
+    "id": "window101",
+    "type": "quality-risking-parameter-change",
+    "baseline_window": 51,
+    "candidate_window": 101
+  },
+  "common_args": [
+    "-t",
+    "1",
+    "-f",
+    "0",
+    "-l",
+    "0",
+    "--primary",
+    "-k",
+    "51"
+  ],
+  "aa_pairs": 2,
+  "ab_pairs": 5,
+  "timeout_seconds": 180,
+  "schedule_seed": 817301,
+  "gates": {
+    "minimum_speedup": 1.1,
+    "max_rss_ratio": 1.05,
+    "max_added_misassemblies": 0,
+    "max_completeness_loss_pp": 0,
+    "min_contiguity_ratio": 1.0,
+    "max_added_base_errors_per_100kb": 0
+  },
+  "datasets": [
+    {
+      "id": "starter_dev_balanced",
+      "split": "development",
+      "seed": 196613,
+      "length": 60000,
+      "coverage": 30,
+      "read_min": 10000,
+      "read_max": 15000,
+      "gc": 0.5,
+      "substitution_rate": 0.001,
+      "indel_rate": 0.0002,
+      "repeat_length": 3000
+    },
+    {
+      "id": "starter_holdout_repeat",
+      "split": "held-out",
+      "seed": 216091,
+      "length": 100000,
+      "coverage": 35,
+      "read_min": 10000,
+      "read_max": 15000,
+      "gc": 0.5,
+      "substitution_rate": 0.002,
+      "indel_rate": 0.0005,
+      "repeat_length": 10000
+    },
+    {
+      "id": "starter_holdout_gc_error",
+      "split": "held-out",
+      "seed": 262147,
+      "length": 80000,
+      "coverage": 25,
+      "read_min": 8000,
+      "read_max": 12000,
+      "gc": 0.65,
+      "substitution_rate": 0.004,
+      "indel_rate": 0.001,
+      "repeat_length": 5000
+    }
+  ],
+  "purpose": "Contributor starter tier; size-only bounded pivot. Original larger config retained. Same candidate, coverage/error models, gates and pair counts."
+}

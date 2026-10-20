@@ -107,7 +107,8 @@ def control(out, config):
     out.mkdir(parents=True, exist_ok=False)
     fasta(out/'truth.fa', 'truth', seq)
     # Internal inversion, two junctions; preserves length and N50.
-    fasta(out/'wrong_inversion.fa', 'wrong', seq[:60000] + rc(seq[60000:120000]) + seq[120000:])
+    left, right = len(seq)//4, len(seq)//2
+    fasta(out/'wrong_inversion.fa', 'wrong', seq[:left] + rc(seq[left:right]) + seq[right:])
     metrics = quast([(out/'truth.fa').resolve(), (out/'wrong_inversion.fa').resolve()], ref, out/'quast')
     good, bad = metrics['truth'], metrics['wrong_inversion']
     assert good['misassemblies'] == 0 and good['genome_fraction'] == 100, good
@@ -190,7 +191,7 @@ def report(out, summaries):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--out', default='reports/experiment')
-    p.add_argument('--config', default='configs/experiment.json')
+    p.add_argument('--config', default='configs/starter.json')
     p.add_argument('--control-only', action='store_true')
     p.add_argument('--datasets', nargs='+', help='Subset; exploratory only unless all frozen datasets run')
     args = p.parse_args()
