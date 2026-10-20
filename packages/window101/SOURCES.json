@@ -1,0 +1,34 @@
+{
+  "pilot_base": "e79fd3f02f8f4e1b771bd13b3b9c7afc11a4bbc3",
+  "frozen_starter_commit": "73293e6",
+  "pins": {
+    "hifiasm": {
+      "url": "https://github.com/chhylp123/hifiasm.git",
+      "commit": "ec9a8b222d149d25b7355e83765698640d59b189"
+    },
+    "quast": {
+      "url": "https://github.com/ablab/quast.git",
+      "commit": "38373fb6454604197d45b047ae61f82e68b61a74",
+      "version": "5.3.0",
+      "aligner": "bundled minimap2 source at the same commit"
+    },
+    "discover": {
+      "url": "https://discoveryathome.org/cli/discover-f46742aaf83e.pyz",
+      "sha256": "f46742aaf83e7907e6391e749dc554b37154079e1b1d5d7e6b9d24acc8656062"
+    }
+  },
+  "sha256": {
+    "configs/starter.json": "17b1dead411069252af82979bbe1bac6b19742aa42ec207a5e0d870edd7491d0",
+    "configs/tools.lock.json": "48c54b45e548898e0c86a8c70f4411b369ce978191e2571b5d494ad5daff7aaa",
+    "reports/experiment/environment.json": "19e4872cd68de84bdfba1bc8b9023d8746cf28b4e37aa84cee29c8964f47b13b",
+    "reports/experiment/runs.json": "632623d358e56046f515d045210528e502e7e4a290297d71b7e940712ad530b4",
+    "reports/experiment/summary.json": "57ceba36af81efe639e4477cde3600ca209781c13bbb3c9678ca89e94d9a6ae9",
+    "reports/experiment/baseline.json": "2a112859c91dcd5fbeaae67fedd8aa863d10556f7e29b2f6dfc7458fd14c6cf5",
+    "reports/experiment/case-table.json": "ec492848eac93ab4dd467e2327d2c559bc8321920c65546638f8d6a13cfb9f82"
+  },
+  "input_manifests": [
+    "reports/experiment/starter_dev_balanced-inputs.json",
+    "reports/experiment/starter_holdout_gc_error-inputs.json",
+    "reports/experiment/starter_holdout_repeat-inputs.json"
+  ]
+}

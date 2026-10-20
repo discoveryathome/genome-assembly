@@ -1,18 +1,9 @@
-# Initialization status
+# Local pilot status
 
-Prepared, not yet executed. This is not a completed pilot or a performance claim.
+Completed the frozen starter experiment: 42 measured assemblies, six excluded warmups, one development dataset and two heldouts. All candidate outputs match the unchanged baseline byte for byte at the primary FASTA/GFA and all-GFA levels. All quality and memory gates pass. All three performance screens fail; no speedup is promoted. See reports/trial/ASSESSMENT.md and reports/experiment/REPORT.md.
 
-Owner authorized screened local builds/benchmarks on the unsandboxed machine and agreed to maintain the local pilot under MIT. A subsequent research-scope confirmation is pending, as requested by start.md step 3. Proposed scope: compare Hifiasm minimizer windows 51 and 101, treating the candidate as a quality-risking parameter optimization.
+Window 51→101 is an existing parameter change, not a novel algorithm. Indexed seed counts fell about 49%; exploratory CPU reductions were 6–10%. Severe host contention and Rosetta prevent a portable performance claim. The original larger config had only sizing warmups; its preserved incomplete attempt is separate from the fully measured 60–100 kbp starter tier.
 
-Completed: literature brief; shallow pinned source clones; static screens; frozen experiment config; original Python bootstrap, generator, benchmark, quality-gate and evidence-verifier code; documentation and provisional Discovery records. Hifiasm screen has no findings; QUAST has 48 findings and zero high, mainly optional committed binaries. No upstream build or benchmark has run. The helper hash was verified before helper execution.
+The runnable harness has source/binary/input pins, actual QUAST positive and structural-error negative controls, fail-closed quality checks, A/A noise controls, paired timing, per-process peak RSS, source snapshots and an offline evidence verifier. Independent full replay, real nonhuman read validation, circular-closure evaluation review and repeatable source-level improvement remain open. Published holdouts are now regression inputs.
 
-Next after confirmation:
-1. Run unit verifier checks, fix failures without changing frozen scientific gates.
-2. Build with scripts/bootstrap.py, capture compiler/binary provenance; Hifiasm x86_64 under Rosetta and QUAST's bundled minimap2 natively.
-3. Exercise true-reference and deliberately inverted-assembly QUAST controls.
-4. Commit frozen config/harness and run development then heldouts, with no tuning on heldouts.
-5. Check output hashes, raw phase/seed counters, quality, RSS, paired speedups and A/A noise; retain negative findings.
-6. Add pinned measured baseline, full report, result package and short-session feasibility assessment.
-7. Validate Discovery files, execute every card's first_step, and verify from a fresh local clone. Report total folder size and limitations; publish nothing.
-
-The source clones, build recipes and reports must stay inside this folder. Do not run committed upstream binaries. The unexecuted harness may need portability fixes; do not describe it as validated until checks pass.
+Recommendation: incubate; do not lead the inaugural featured lineup with the current broad assembler task. The next contribution is scoped in reports/trial/NEXT-SESSION.md. The user agreed to maintain the pilot and selected MIT for original code; weekly review capacity and scientific acceptance are still outstanding. No external posting, hub listing, repository creation or push occurred.

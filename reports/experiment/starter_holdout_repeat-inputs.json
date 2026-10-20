@@ -1,0 +1,26 @@
+{
+  "id": "starter_holdout_repeat",
+  "split": "held-out",
+  "seed": 216091,
+  "length": 100000,
+  "coverage": 35,
+  "read_min": 10000,
+  "read_max": 15000,
+  "gc": 0.5,
+  "substitution_rate": 0.002,
+  "indel_rate": 0.0005,
+  "repeat_length": 10000,
+  "circular": true,
+  "read_count": 280,
+  "read_bases": 3536035,
+  "actual_coverage": 35.36035,
+  "repeat_coordinates": [
+    20000,
+    60000,
+    10000
+  ],
+  "sha256": {
+    "reference.fa": "6698022cc7075b3e9934536981c5d89c20673ab67bd0933919c3af467e0936b4",
+    "reads.fa": "83907da9c73279f79bb2206496f0c08f1b1e148ec4290a820e954ef34321c627"
+  }
+}

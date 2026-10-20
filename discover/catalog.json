@@ -3,7 +3,7 @@
   "priority_revision": 1,
   "assessed_on": "2026-10-20",
   "priority_log": "discover/priority-log.md",
-  "status": "Provisional cards; initialization measurement pending scope confirmation",
+  "status": "Starter trial completed and packaged; independent replay and source-level bottleneck work remain open. No public intake.",
   "tracks": [
     {
       "id": "reproduce",
@@ -14,8 +14,8 @@
           "id": "reproduce-01",
           "question": "Can an independent replay reproduce the controlled quality and performance results?",
           "starting_points": [
-            "research/BRIEF.md",
-            "configs/experiment.json",
+            "reports/trial/ASSESSMENT.md",
+            "configs/starter.json",
             "DISCOVERY.md"
           ],
           "methods": [
@@ -28,7 +28,7 @@
               "scripts/first_step.py",
               "reproduce"
             ],
-            "expected": "Print the scoped configuration/brief or pass the associated verifier checks. Reproduce first_step requires the initialization experiment to exist."
+            "expected": "Pass the archived evidence verifier (reproduce), pass gate unit checks (verifier), or print the frozen candidate/brief (other tracks)."
           },
           "bottleneck_link": "DISCOVERY.md#experimental-contract",
           "claim_kind": [
@@ -50,8 +50,8 @@
           "id": "verifier-01",
           "question": "Can a structurally wrong or incomplete assembly evade the quality gate?",
           "starting_points": [
-            "research/BRIEF.md",
-            "configs/experiment.json",
+            "reports/trial/ASSESSMENT.md",
+            "configs/starter.json",
             "DISCOVERY.md"
           ],
           "methods": [
@@ -64,7 +64,7 @@
               "scripts/first_step.py",
               "verifier"
             ],
-            "expected": "Print the scoped configuration/brief or pass the associated verifier checks. Reproduce first_step requires the initialization experiment to exist."
+            "expected": "Pass the archived evidence verifier (reproduce), pass gate unit checks (verifier), or print the frozen candidate/brief (other tracks)."
           },
           "bottleneck_link": "DISCOVERY.md#experimental-contract",
           "claim_kind": [
@@ -86,8 +86,9 @@
           "id": "overlap-seeding-01",
           "question": "Which seed-index or chaining operation limits this small workload?",
           "starting_points": [
-            "research/BRIEF.md",
-            "configs/experiment.json",
+            "reports/trial/NEXT-SESSION.md",
+            "reports/trial/ASSESSMENT.md",
+            "configs/starter.json",
             "DISCOVERY.md"
           ],
           "methods": [
@@ -100,7 +101,7 @@
               "scripts/first_step.py",
               "overlap-seeding"
             ],
-            "expected": "Print the scoped configuration/brief or pass the associated verifier checks. Reproduce first_step requires the initialization experiment to exist."
+            "expected": "Pass the archived evidence verifier (reproduce), pass gate unit checks (verifier), or print the frozen candidate/brief (other tracks)."
           },
           "bottleneck_link": "DISCOVERY.md#experimental-contract",
           "claim_kind": [
@@ -122,8 +123,8 @@
           "id": "literature-01",
           "question": "Does newer primary-source evidence change the minimizer or evaluation assumptions?",
           "starting_points": [
-            "research/BRIEF.md",
-            "configs/experiment.json",
+            "reports/trial/ASSESSMENT.md",
+            "configs/starter.json",
             "DISCOVERY.md"
           ],
           "methods": [
@@ -136,7 +137,7 @@
               "scripts/first_step.py",
               "literature"
             ],
-            "expected": "Print the scoped configuration/brief or pass the associated verifier checks. Reproduce first_step requires the initialization experiment to exist."
+            "expected": "Pass the archived evidence verifier (reproduce), pass gate unit checks (verifier), or print the frozen candidate/brief (other tracks)."
           },
           "bottleneck_link": "DISCOVERY.md#experimental-contract",
           "claim_kind": [

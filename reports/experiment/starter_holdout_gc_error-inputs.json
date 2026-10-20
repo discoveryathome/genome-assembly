@@ -1,0 +1,26 @@
+{
+  "id": "starter_holdout_gc_error",
+  "split": "held-out",
+  "seed": 262147,
+  "length": 80000,
+  "coverage": 25,
+  "read_min": 8000,
+  "read_max": 12000,
+  "gc": 0.65,
+  "substitution_rate": 0.004,
+  "indel_rate": 0.001,
+  "repeat_length": 5000,
+  "circular": true,
+  "read_count": 200,
+  "read_bases": 1965624,
+  "actual_coverage": 24.5703,
+  "repeat_coordinates": [
+    16000,
+    48000,
+    5000
+  ],
+  "sha256": {
+    "reference.fa": "7b66d0308357cb412be529a5376635e594b34c1d0970dcf2c74ba918aa8ca130",
+    "reads.fa": "ff98cdefd35d57143f0b18117c45c1ee400fa28cd1ea324056fd08d59d535095"
+  }
+}

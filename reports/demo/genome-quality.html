@@ -1,0 +1,73 @@
+<div id="genome-quality-demo">
+  <h3>Putting DNA back in the right order</h3>
+  <div class="viz-controls" aria-label="Reconstruction example">
+    <button type="button" class="btn" data-mode="correct" aria-pressed="true">Correct reconstruction</button>
+    <button type="button" class="btn" data-mode="inverted" aria-pressed="false">Flipped DNA segment</button>
+  </div>
+  <svg class="dna-diagram" role="img" aria-label="Schematic of a 250,000-base reference and its reconstruction"></svg>
+  <div class="viz-grid" aria-live="polite">
+    <div class="card viz-stat"><span>Assembly length</span><div class="viz-stat-value tabular-nums">250,000</div><span class="text-small">DNA bases in either reconstruction</span></div>
+    <div class="card viz-stat"><span>Structural errors</span><div class="viz-stat-value tabular-nums" data-errors>0</div><span class="text-small" data-verdict>Passes the quality control</span></div>
+  </div>
+  <div class="text-small text-muted">Measured QUAST control · synthetic DNA · schematic blocks, not genes</div>
+</div>
+<style>
+#genome-quality-demo .dna-diagram { display:block; width:100%; height:205px; margin-block:12px; color:var(--foreground); }
+#genome-quality-demo .dna-label { fill:var(--foreground); font:inherit; }
+#genome-quality-demo .dna-piece { fill:var(--viz-series-1); opacity:.28; }
+#genome-quality-demo .dna-middle { fill:var(--viz-series-2); }
+#genome-quality-demo .dna-flip { transition:transform 260ms ease; }
+@media (prefers-reduced-motion: reduce) { #genome-quality-demo .dna-flip { transition:none; } }
+</style>
+<script>
+(() => {
+ const root=document.getElementById('genome-quality-demo');
+ const svg=root.querySelector('.dna-diagram');
+ const ns='http://www.w3.org/2000/svg';
+ let mode='correct';
+ function element(tag,attrs,text) {
+   const el=document.createElementNS(ns,tag);
+   Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));
+   if(text!==undefined)el.textContent=text;
+   svg.appendChild(el); return el;
+ }
+ function draw() {
+   const width=Math.max(280,root.getBoundingClientRect().width);
+   svg.setAttribute('viewBox',`0 0 ${width} 205`);
+   svg.replaceChildren();
+   element('title',{},'Reference and reconstruction of a 250,000-base synthetic genome');
+   element('desc',{},mode==='correct'?'The three DNA blocks have the correct orientation. QUAST detects zero structural errors.':'The middle block is reversed. Assembly length is unchanged, but QUAST detects two structural errors.');
+   const left=8,span=width-16,ratios=[.24,.24,.52];
+   [ ['Reference',43,false],['Reconstruction',126,true] ].forEach(([title,y,isOutput])=>{
+     element('text',{x:left,y:y-13,class:'dna-label'},title);
+     let x=left;
+     ratios.forEach((ratio,i)=>{
+       const w=ratio*span-4,tip=Math.min(12,w/5), cy=y+16;
+       const piece=element('polygon',{points:`${x},${y} ${x+w-tip},${y} ${x+w},${cy} ${x+w-tip},${y+32} ${x},${y+32}`,class:'dna-piece '+(i===1?'dna-middle ':'' )+(isOutput&&i===1?'dna-flip':'')});
+       if(isOutput&&i===1){piece.style.transformOrigin=`${x+w/2}px ${cy}px`;piece.style.transform=mode==='inverted'?'rotate(180deg)':'rotate(0deg)';}
+       element('text',{x:x+w/2,y:cy+5,'text-anchor':'middle',class:'dna-label','data-middle-label':String(isOutput&&i===1)},String.fromCharCode(65+i)+' '+(isOutput&&i===1&&mode==='inverted'?'←':'→'));
+       x+=ratio*span;
+     });
+   });
+   element('text',{x:left,y:188,class:'dna-label'},'0');
+   element('text',{x:width-8,y:188,'text-anchor':'end',class:'dna-label'},'250,000 bases');
+ }
+ function apply(next,save) {
+   mode=next==='inverted'?'inverted':'correct';
+   root.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));
+   root.querySelector('[data-errors]').textContent=mode==='correct'?'0':'2';
+   root.querySelector('[data-verdict]').textContent=mode==='correct'?'Passes the quality control':'Rejected: wrong DNA order';
+   if(svg.childElementCount){
+     root.querySelector('.dna-flip').style.transform=mode==='inverted'?'rotate(180deg)':'rotate(0deg)';
+     root.querySelector('[data-middle-label="true"]').textContent=mode==='inverted'?'B ←':'B →';
+     svg.querySelector('desc').textContent=mode==='inverted'?'Middle block reversed; two structural errors.':'Correct orientation; zero structural errors.';
+   } else draw();
+   if(save&&window.openai&&window.openai.setWidgetState)window.openai.setWidgetState({modelContent:{control:mode},privateContent:{mode}}).catch(()=>{});
+ }
+ root.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.mode,true)));
+ const saved=window.openai&&window.openai.widgetState;
+ apply(saved&&saved.privateContent&&saved.privateContent.mode,false);
+ window.addEventListener('openai:set_globals',e=>{const s=e.detail&&e.detail.globals&&e.detail.globals.widgetState;if(s)apply(s.privateContent&&s.privateContent.mode,false);});
+ new ResizeObserver(draw).observe(root);
+})();
+</script>

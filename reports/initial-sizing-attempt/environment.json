@@ -1,0 +1,141 @@
+{
+  "time_utc": "2026-10-20T20:18:38.020528+00:00",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "load_start": [
+    48.73828125,
+    53.275390625,
+    41.93896484375
+  ],
+  "config_path": "configs/experiment.json",
+  "config_sha256": "a7c6cb92d172019b70d6041a0d4e9917bbd9e247ad806d98c2bcdf60cb502860",
+  "generator_sha256": "8d2d07017b97fc69c0fb3e0353154acdb8519309a058c9dcba8cea964c0208d0",
+  "harness_sha256": "723ffadc4897ccae15e006e58f381d1d8fd4107e29fcb7e55f4bd474e144536e",
+  "quality_sha256": "d9053fe1854608542f2f10f1a80af26655033105b4c7f4bf659aa2693abd2ce1",
+  "build": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "translated_hifiasm": true,
+    "commands": [
+      [
+        "make",
+        "-C",
+        "vendor/hifiasm",
+        "-j2",
+        "CXX=c++",
+        "CC=cc",
+        "CXXFLAGS=-g -O3 -msse4.2 -mpopcnt -fomit-frame-pointer -Wall -arch x86_64"
+      ],
+      [
+        "make",
+        "-C",
+        "vendor/quast/quast_libs/minimap2",
+        "-j2",
+        "aarch64=1"
+      ]
+    ],
+    "pins": {
+      "hifiasm": {
+        "url": "https://github.com/chhylp123/hifiasm.git",
+        "commit": "ec9a8b222d149d25b7355e83765698640d59b189"
+      },
+      "quast": {
+        "url": "https://github.com/ablab/quast.git",
+        "commit": "38373fb6454604197d45b047ae61f82e68b61a74",
+        "version": "5.3.0",
+        "aligner": "bundled minimap2 source at the same commit"
+      },
+      "discover": {
+        "url": "https://discoveryathome.org/cli/discover-f46742aaf83e.pyz",
+        "sha256": "f46742aaf83e7907e6391e749dc554b37154079e1b1d5d7e6b9d24acc8656062"
+      }
+    },
+    "quast_python": "/usr/bin/python3",
+    "quast_python_version": "Python 3.9.6",
+    "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+    "build_seconds": 0.9527506828308105,
+    "binaries": {
+      "vendor/hifiasm/hifiasm": "f360b2850b6ec1b4291ed56bf7954bc95c89c4af3846f2307719c054f799db8e",
+      "vendor/quast/quast_libs/minimap2/minimap2": "960fbdd253e110208498badf48eac8e09352c5fca8383d4bf878cf088c0375ab"
+    },
+    "versions": {
+      "vendor/hifiasm/hifiasm": "0.25.0-r726",
+      "vendor/quast/quast_libs/minimap2/minimap2": "2.28-r1209"
+    }
+  },
+  "configuration": {
+    "schema": "genome-pilot-experiment/v1",
+    "question": "Does a wider minimizer window reduce overlap-seeding work without measured quality loss?",
+    "frozen_candidate": {
+      "id": "window101",
+      "type": "quality-risking-parameter-change",
+      "baseline_window": 51,
+      "candidate_window": 101
+    },
+    "common_args": [
+      "-t",
+      "1",
+      "-f",
+      "0",
+      "-l",
+      "0",
+      "--primary",
+      "-k",
+      "51"
+    ],
+    "aa_pairs": 2,
+    "ab_pairs": 5,
+    "timeout_seconds": 180,
+    "schedule_seed": 817301,
+    "gates": {
+      "minimum_speedup": 1.1,
+      "max_rss_ratio": 1.05,
+      "max_added_misassemblies": 0,
+      "max_completeness_loss_pp": 0,
+      "min_contiguity_ratio": 1.0,
+      "max_added_base_errors_per_100kb": 0
+    },
+    "datasets": [
+      {
+        "id": "dev_balanced",
+        "split": "development",
+        "seed": 104729,
+        "length": 250000,
+        "coverage": 30,
+        "read_min": 10000,
+        "read_max": 15000,
+        "gc": 0.5,
+        "substitution_rate": 0.001,
+        "indel_rate": 0.0002,
+        "repeat_length": 3000
+      },
+      {
+        "id": "holdout_repeat",
+        "split": "held-out",
+        "seed": 130363,
+        "length": 400000,
+        "coverage": 35,
+        "read_min": 10000,
+        "read_max": 15000,
+        "gc": 0.5,
+        "substitution_rate": 0.002,
+        "indel_rate": 0.0005,
+        "repeat_length": 10000
+      },
+      {
+        "id": "holdout_gc_error",
+        "split": "held-out",
+        "seed": 155921,
+        "length": 300000,
+        "coverage": 25,
+        "read_min": 8000,
+        "read_max": 12000,
+        "gc": 0.65,
+        "substitution_rate": 0.004,
+        "indel_rate": 0.001,
+        "repeat_length": 5000
+      }
+    ]
+  }
+}

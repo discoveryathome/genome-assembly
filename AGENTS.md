@@ -1,6 +1,6 @@
 # Genome assembly pilot
 
-Read DISCOVERY.md, configs/experiment.json, discover/frontier.json and the latest report before work. This is LOCAL mode: no repository creation, posting, pushing or hub consent. Original code is MIT; dependencies retain upstream licenses.
+Read DISCOVERY.md, configs/starter.json, discover/frontier.json and the latest report before work. This is LOCAL mode: no repository creation, posting, pushing or hub consent. Original code is MIT; dependencies retain upstream licenses.
 
 One session owns one bounded task. Use the Discovery helper's seeded picker when no task was assigned; record seed and base commit. Do not spawn subagents unless the user explicitly asks. Screen any new external source before execution, and get owner permission if the session is unsandboxed. This initialization session already has that permission.
 

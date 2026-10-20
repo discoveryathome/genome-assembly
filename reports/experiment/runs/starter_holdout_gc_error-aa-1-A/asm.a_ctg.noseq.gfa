@@ -1,0 +1,19 @@
+S	atg000001l	*	LN:i:17733	rd:i:1
+A	atg000001l	0	-	read_17	0	11383	id:i:17	HG:A:a
+A	atg000001l	6192	+	read_140	0	11541	id:i:140	HG:A:a
+S	atg000002l	*	LN:i:17415	rd:i:1
+A	atg000002l	0	-	read_31	0	10317	id:i:31	HG:A:a
+A	atg000002l	4633	-	read_71	0	9339	id:i:71	HG:A:a
+A	atg000002l	7235	+	read_79	0	10180	id:i:79	HG:A:a
+S	atg000003l	*	LN:i:14069	rd:i:1
+A	atg000003l	0	+	read_97	0	11590	id:i:97	HG:A:a
+A	atg000003l	2619	+	read_135	0	11450	id:i:135	HG:A:a
+S	atg000004l	*	LN:i:8965	rd:i:0
+A	atg000004l	0	-	read_115	0	8965	id:i:115	HG:A:a
+S	atg000005l	*	LN:i:13535	rd:i:0
+A	atg000005l	0	+	read_142	0	10048	id:i:142	HG:A:a
+A	atg000005l	1978	+	read_193	0	11557	id:i:193	HG:A:a
+L	atg000003l	+	atg000005l	+	1047M	L1:i:13022	L2:i:0
+L	atg000004l	+	atg000005l	+	4293M	L1:i:4672	L2:i:0
+L	atg000005l	-	atg000004l	-	4293M	L1:i:9242	L2:i:0
+L	atg000005l	-	atg000003l	-	1047M	L1:i:12488	L2:i:0

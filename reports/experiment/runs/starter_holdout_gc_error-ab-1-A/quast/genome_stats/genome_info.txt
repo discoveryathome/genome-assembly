@@ -1,0 +1,14 @@
+reference chromosomes:
+	synthetic_circle (total length: 80000 bp, total length without N's: 80000 bp, maximal covered length: 80000 bp)
+
+total genome size: 80000
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+assembly                 | 100.000   | 1.000       | 0         | -         | -         | -         | -         |

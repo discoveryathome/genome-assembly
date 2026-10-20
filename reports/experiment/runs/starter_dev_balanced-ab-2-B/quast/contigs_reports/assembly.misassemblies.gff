@@ -1,0 +1,2 @@
+##gff-version 3
+ptg000001l	QUAST	possible_assembly_error	40088	40089	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -12653 [linear representation of circular genome]

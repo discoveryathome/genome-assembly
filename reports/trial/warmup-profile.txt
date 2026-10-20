@@ -1,0 +1,400 @@
+Analysis of sampling hifiasm (pid 37901) every 10 milliseconds
+Process:         hifiasm [37901]
+Path:            /Users/USER/*/hifiasm
+Load Address:    0x10415a000
+Identifier:      hifiasm
+Version:         0
+Code Type:       X86-64 (translated)
+Platform:        macOS
+Parent Process:  Python [32155]
+Target Type:     live task
+
+Date/Time:       2026-10-20 16:20:21.970 -0400
+Launch Time:     2026-10-20 16:19:11.544 -0400
+OS Version:      macOS 26.6.2 (25G83)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         77.8M
+Physical footprint (peak):  86.4M
+Idle exit:                  untracked
+----
+
+Call graph:
+    453 Thread_316417927   DispatchQueue_1: com.apple.main-thread  (serial)
+    + 203 kt_pipeline  (in hifiasm) + 379  [0x1042b264b]  kthread.cpp:155
+    + ! 203 _pthread_join  (in libsystem_pthread.dylib) + 356  [0x7ff8077175ec]
+    + !   203 ???  (in <unknown binary>)  [0x7ff893bf5fbc]
+    + !     203 ???  (in <unknown binary>)  [0x7ff893622b80]
+    + 141 minimizers_qgen0(ha_abuf_s*, char*, long long, unsigned long long, unsigned long long, Candidates_list*, kvec_t_u8_warp*, void*, ha_pt_s*, All_reads*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*)  (in hifiasm) + 1556  [0x1042e5304]  anchor.cpp:1046
+    + ! 135 rs_sort_ha_an1(anchor1_t*, anchor1_t*, int, int)  (in hifiasm) + 826  [0x1042dbbfa]  anchor.cpp:26
+    + ! : 130 rs_sort_ha_an1(anchor1_t*, anchor1_t*, int, int)  (in hifiasm) + 826  [0x1042dbbfa]  anchor.cpp:26
+    + ! : | 108 rs_sort_ha_an1(anchor1_t*, anchor1_t*, int, int)  (in hifiasm) + 826  [0x1042dbbfa]  anchor.cpp:26
+    + ! : | + 96 rs_sort_ha_an1(anchor1_t*, anchor1_t*, int, int)  (in hifiasm) + 826  [0x1042dbbfa]  anchor.cpp:26
+    + ! : | + ! 81 rs_sort_ha_an1(anchor1_t*, anchor1_t*, int, int)  (in hifiasm) + 826  [0x1042dbbfa]  anchor.cpp:26
+    + ! : | + ! : 66 rs_sort_ha_an1(anchor1_t*, anchor1_t*, int, int)  (in hifiasm) + 826  [0x1042dbbfa]  anchor.cpp:26
+    + ! : | + ! : | 15 ???  (in <unknown binary>)  [0x104742a70]
+    + ! : | + ! : | 13 ???  (in <unknown binary>)  [0x104742a4c]
+    + ! : | + ! : | 12 ???  (in <unknown binary>)  [0x104742758]
+    + ! : | + ! : | 10 ???  (in <unknown binary>)  [0x104742830]
+    + ! : | + ! : | 3 ???  (in <unknown binary>)  [0x1047429e0]
+    + ! : | + ! : | 2 ???  (in <unknown binary>)  [0x1047429ec]
+    + ! : | + ! : | 2 ???  (in <unknown binary>)  [0x104742a5c]
+    + ! : | + ! : | 2 ???  (in <unknown binary>)  [0x104742a94]
+    + ! : | + ! : | 2 ???  (in <unknown binary>)  [0x104742aa4]
+    + ! : | + ! : | 1 ???  (in <unknown binary>)  [0x104742894]
+    + ! : | + ! : | 1 ???  (in <unknown binary>)  [0x1047428ac]
+    + ! : | + ! : | 1 ???  (in <unknown binary>)  [0x1047428b8]
+    + ! : | + ! : | 1 ???  (in <unknown binary>)  [0x1047428c0]
+    + ! : | + ! : | 1 ???  (in <unknown binary>)  [0x104742a3c]
+    + ! : | + ! : 6 ???  (in <unknown binary>)  [0x104742900]
+    + ! : | + ! : 2 ???  (in <unknown binary>)  [0x104742758]
+    + ! : | + ! : 2 ???  (in <unknown binary>)  [0x1047429e0]
+    + ! : | + ! : 1 ???  (in <unknown binary>)  [0x104742738]
+    + ! : | + ! : 1 ???  (in <unknown binary>)  [0x104742810]
+    + ! : | + ! : 1 ???  (in <unknown binary>)  [0x104742834]
+    + ! : | + ! : 1 ???  (in <unknown binary>)  [0x104742850]
+    + ! : | + ! : 1 ???  (in <unknown binary>)  [0x104742a20]
+    + ! : | + ! 9 ???  (in <unknown binary>)  [0x104742a20]
+    + ! : | + ! 2 ???  (in <unknown binary>)  [0x104742738]
+    + ! : | + ! 1 ???  (in <unknown binary>)  [0x104742758]
+    + ! : | + ! 1 ???  (in <unknown binary>)  [0x1047427d4]
+    + ! : | + ! 1 ???  (in <unknown binary>)  [0x104742804]
+    + ! : | + ! 1 ???  (in <unknown binary>)  [0x10474281c]
+    + ! : | + 2 ???  (in <unknown binary>)  [0x104742758]
+    + ! : | + 2 ???  (in <unknown binary>)  [0x104742894]
+    + ! : | + 1 ???  (in <unknown binary>)  [0x104742738]
+    + ! : | + 1 ???  (in <unknown binary>)  [0x1047428a0]
+    + ! : | + 1 ???  (in <unknown binary>)  [0x1047428b8]
+    + ! : | + 1 ???  (in <unknown binary>)  [0x1047428bc]
+    + ! : | + 1 ???  (in <unknown binary>)  [0x1047428c0]
+    + ! : | + 1 ???  (in <unknown binary>)  [0x1047428e4]
+    + ! : | + 1 ???  (in <unknown binary>)  [0x1047429e0]
+    + ! : | + 1 ???  (in <unknown binary>)  [0x104742aa4]
+    + ! : | 7 ???  (in <unknown binary>)  [0x104742850]
+    + ! : | 6 ???  (in <unknown binary>)  [0x1047428dc]
+    + ! : | 3 ???  (in <unknown binary>)  [0x104742894]
+    + ! : | 2 ???  (in <unknown binary>)  [0x104742758]
+    + ! : | 1 ???  (in <unknown binary>)  [0x104742738]
+    + ! : | 1 ???  (in <unknown binary>)  [0x104742764]
+    + ! : | 1 ???  (in <unknown binary>)  [0x1047428e4]
+    + ! : | 1 ???  (in <unknown binary>)  [0x1047428f4]
+    + ! : 3 ???  (in <unknown binary>)  [0x104742758]
+    + ! : 1 ???  (in <unknown binary>)  [0xffffb94d10c58349]
+    + ! : | 1 ???  (in <unknown binary>)  [0x104742af4]
+    + ! : 1 ???  (in <unknown binary>)  [0x104742900]
+    + ! 2 ???  (in <unknown binary>)  [0x104742758]
+    + ! 2 ???  (in <unknown binary>)  [0x104742900]
+    + ! 1 ???  (in <unknown binary>)  [0x10474285c]
+    + ! 1 ???  (in <unknown binary>)  [0x104742884]
+    + 24 minimizers_qgen0(ha_abuf_s*, char*, long long, unsigned long long, unsigned long long, Candidates_list*, kvec_t_u8_warp*, void*, ha_pt_s*, All_reads*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*)  (in hifiasm) + 366  [0x1042e4e5e]  anchor.cpp:1003
+    + ! 3 ???  (in <unknown binary>)  [0x10473d2b4]
+    + ! 2 ???  (in <unknown binary>)  [0x10473d00c]
+    + ! 2 ???  (in <unknown binary>)  [0x10473d01c]
+    + ! 2 ???  (in <unknown binary>)  [0x10473d048]
+    + ! 2 ???  (in <unknown binary>)  [0x10473d078]
+    + ! 2 ???  (in <unknown binary>)  [0x10473d08c]
+    + ! 2 ???  (in <unknown binary>)  [0x10473d1b8]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d0b4]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d1d8]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d2f0]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d350]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d360]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d418]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d4bc]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d7c4]
+    + ! 1 ???  (in <unknown binary>)  [0x10473dca0]
+    + 14 h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 301  [0x1042eb33d]  anchor.cpp:2310
+    + ! 3 ???  (in <unknown binary>)  [0x10474e378]
+    + ! 3 ???  (in <unknown binary>)  [0x10474e398]
+    + ! 3 ???  (in <unknown binary>)  [0x10474e3b4]
+    + ! 1 ???  (in <unknown binary>)  [0x10474e024]
+    + ! 1 ???  (in <unknown binary>)  [0x10474e3cc]
+    + ! 1 ???  (in <unknown binary>)  [0x10474e3d0]
+    + ! 1 ???  (in <unknown binary>)  [0x10474e3d4]
+    + ! 1 ???  (in <unknown binary>)  [0x10474e420]
+    + 11 lchain_qdp_mcopy_fast(Candidates_list*, long long, long long, long long, Chain_Data*, overlap_region_alloc*, long long, long long, long long, double, double, double, unsigned int, long long, long long, long long, unsigned int, long long, long long, double, long long, long long)  (in hifiasm) + 335  [0x104178bcf]  Hash_Table.cpp:2116
+    + ! 2 ???  (in <unknown binary>)  [0x104592e48]
+    + ! 2 ???  (in <unknown binary>)  [0x104592e88]
+    + ! 2 ???  (in <unknown binary>)  [0x104592f68]
+    + ! 2 ???  (in <unknown binary>)  [0x104593040]
+    + ! 2 ???  (in <unknown binary>)  [0x104593064]
+    + ! 1 ???  (in <unknown binary>)  [0x104593048]
+    + 11 minimizers_qgen0(ha_abuf_s*, char*, long long, unsigned long long, unsigned long long, Candidates_list*, kvec_t_u8_warp*, void*, ha_pt_s*, All_reads*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*)  (in hifiasm) + 467  [0x1042e4ec3]  anchor.cpp:1013
+    + ! 8 ???  (in <unknown binary>)  [0x10472c634]
+    + ! 1 ???  (in <unknown binary>)  [0x10472c698]
+    + ! 1 ???  (in <unknown binary>)  [0x10472c6b4]
+    + ! 1 ???  (in <unknown binary>)  [0x10472c6c8]
+    + 10 h_ec_lchain_fast_new(ha_abuf_s*, unsigned int, UC_Read*, UC_Read*, All_reads*, overlap_region_alloc*, Candidates_list*, bit_extz_t*, asg16_v*, asg64_v*, ma_hit_t_alloc*, ma_hit_t_alloc*, double)  (in hifiasm) + 1637  [0x10438a9a5]  ecovlp.cpp:5105
+    + ! 6 ???  (in <unknown binary>)  [0x104572d24]
+    + ! 1 ???  (in <unknown binary>)  [0x104572bdc]
+    + ! 1 ???  (in <unknown binary>)  [0x104572bf8]
+    + ! 1 ???  (in <unknown binary>)  [0x104572d34]
+    + ! 1 ???  (in <unknown binary>)  [0x104572d4c]
+    + 6 mz1_ha_sketch(char const*, int, int, int, unsigned int, int, ha_mz1_v*, void const*, int, kvec_t_u8_warp*, kvec_t_u64_warp*, ha_pt_s*, int, int, float, st_mt_t*, int, int, void*)  (in hifiasm) + 1647  [0x1042d6fef]  sketch.cpp:581
+    + ! 4 ???  (in <unknown binary>)  [0x10472e17c]
+    + ! 1 ???  (in <unknown binary>)  [0x10472e0ec]
+    + ! 1 ???  (in <unknown binary>)  [0x10472e100]
+    + 5 ???  (in <unknown binary>)  [0x30b1bcba]
+    + ! 4 kt_for  (in hifiasm) + 283  [0x1042b236b]  kthread.cpp:71
+    + ! : 4 ???  (in <unknown binary>)  [0x104821a78]
+    + ! 1 ha_pt_gen(hifiasm_opt_t const*, void const*, int, int, All_reads*, int*, int*)  (in hifiasm) + 274  [0x1042cdbd2]  htab.cpp:1250
+    + !   1 fprintf  (in libsystem_c.dylib) + 160  [0x7ff8075b9ab0]
+    + !     1 vfprintf_l  (in libsystem_c.dylib) + 83  [0x7ff8075b9b23]
+    + !       1 __xvprintf  (in libsystem_c.dylib) + 364  [0x7ff8075b9ca7]
+    + !         1 __vfprintf  (in libsystem_c.dylib) + 3794  [0x7ff8075a85ca]
+    + !           1 __dtoa  (in libsystem_c.dylib) + 306  [0x7ff8075b61a6]
+    + !             1 ???  (in <unknown binary>)  [0x7ff893a6fbd4]
+    + 5 h_ec_lchain_fast_new(ha_abuf_s*, unsigned int, UC_Read*, UC_Read*, All_reads*, overlap_region_alloc*, Candidates_list*, bit_extz_t*, asg16_v*, asg64_v*, ma_hit_t_alloc*, ma_hit_t_alloc*, double)  (in hifiasm) + 1673  [0x10438a9c9]  ecovlp.cpp:5106
+    + ! 2 ???  (in <unknown binary>)  [0x7ff893c5d060]
+    + ! 2 ???  (in <unknown binary>)  [0x7ff893c5d0f4]
+    + ! 1 ???  (in <unknown binary>)  [0x7ff893c5d054]
+    + 4 h_ec_lchain_fast_new(ha_abuf_s*, unsigned int, UC_Read*, UC_Read*, All_reads*, overlap_region_alloc*, Candidates_list*, bit_extz_t*, asg16_v*, asg64_v*, ma_hit_t_alloc*, ma_hit_t_alloc*, double)  (in hifiasm) + 1297  [0x10438a851]  ecovlp.cpp:5119
+    + ! 4 ???  (in <unknown binary>)  [0x104572d24]
+    + 3 ???  (in <unknown binary>)  [0xffffc9a100000b08]
+    + ! 3 h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 301  [0x1042eb33d]  anchor.cpp:2310
+    + !   2 ???  (in <unknown binary>)  [0x10474e850]
+    + !   1 ???  (in <unknown binary>)  [0x10474e71c]
+    + 3 worker_hap_dc_ec_gen_new_idx(void*, long, int)  (in hifiasm) + 459  [0x10438ed1b]  ecovlp.cpp:3970
+    + ! 3 ???  (in <unknown binary>)  [0x10481c5cc]
+    + 2 ???  (in <unknown binary>)  [0xffffe8ac00000054]
+    + ! 2 h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 301  [0x1042eb33d]  anchor.cpp:2310
+    + !   1 ???  (in <unknown binary>)  [0x10474e5bc]
+    + !   1 ???  (in <unknown binary>)  [0x10474e5d8]
+    + 1 ???  (in <unknown binary>)  [0x4e00002b1e]
+    + ! 1 h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 301  [0x1042eb33d]  anchor.cpp:2310
+    + !   1 ???  (in <unknown binary>)  [0x10474e754]
+    + 1 ???  (in <unknown binary>)  [0x57000033a4]
+    + ! 1 minimizers_qgen0(ha_abuf_s*, char*, long long, unsigned long long, unsigned long long, Candidates_list*, kvec_t_u8_warp*, void*, ha_pt_s*, All_reads*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*)  (in hifiasm) + 2366  [0x1042e562e]  anchor.cpp:1072
+    + !   1 ???  (in <unknown binary>)  [0x10494e288]
+    + 1 ???  (in <unknown binary>)  [0x6300000d87]
+    + ! 1 h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 301  [0x1042eb33d]  anchor.cpp:2310
+    + !   1 ???  (in <unknown binary>)  [0x10474e7cc]
+    + 1 ???  (in <unknown binary>)  [0x1a6500000076]
+    + ! 1 h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 301  [0x1042eb33d]  anchor.cpp:2310
+    + !   1 ???  (in <unknown binary>)  [0x10474e754]
+    + 1 ???  (in <unknown binary>)  [0x201200000067]
+    + ! 1 h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 301  [0x1042eb33d]  anchor.cpp:2310
+    + !   1 ???  (in <unknown binary>)  [0x10474e824]
+    + 1 ???  (in <unknown binary>)  [0xffffc9a100000d87]
+    + ! 1 minimizers_qgen0(ha_abuf_s*, char*, long long, unsigned long long, unsigned long long, Candidates_list*, kvec_t_u8_warp*, void*, ha_pt_s*, All_reads*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*)  (in hifiasm) + 2366  [0x1042e562e]  anchor.cpp:1072
+    + !   1 ???  (in <unknown binary>)  [0x10494e268]
+    + 1 ???  (in <unknown binary>)  [0xfffffb3500000082]
+    + ! 1 h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 301  [0x1042eb33d]  anchor.cpp:2310
+    + !   1 ???  (in <unknown binary>)  [0x10474e794]
+    + 1 h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 473  [0x1042eb3e9]  anchor.cpp:2314
+    + ! 1 ???  (in <unknown binary>)  [0x104753244]
+    + 1 ha_pt_gen(ha_ct_t*, int, int)  (in hifiasm) + 167  [0x1042ca557]  htab.cpp:391
+    + ! 1 ???  (in <unknown binary>)  [0x1047338d8]
+    + 1 lchain_qgen_mcopy_fast(Candidates_list*, overlap_region_alloc*, unsigned int, unsigned long long, All_reads*, unsigned int, unsigned long long, long long, long long, long long, double, double, double, long long, unsigned int, long long, double, unsigned int, unsigned int, st_mt_t*, unsigned long long)  (in hifiasm) + 509  [0x1042e98fd]  anchor.cpp:1933
+    + ! 1 ???  (in <unknown binary>)  [0x104593fb0]
+    + 1 recover_UC_Read_sub_region(char*, long long, long long, unsigned char, All_reads*, long long)  (in hifiasm) + 747  [0x1041604ab]  Process_Read.cpp:586
+    +   1 ???  (in <unknown binary>)  [0x104572db8]
+    453 Thread_316417944: com.apple.rosetta.exceptionserver
+    + 453 ???  (in Rosetta Runtime Routines)  [0x7ff7ffe7bed0]
+    179 Thread_316441170
+    + 98 mz1_worker_for_mz(void*, long, int)  (in hifiasm) + 249  [0x1042d2a29]  htab.cpp:884
+    + ! 12 ???  (in <unknown binary>)  [0x10473d078]
+    + ! 7 ???  (in <unknown binary>)  [0x10473d2c0]
+    + ! 6 ???  (in <unknown binary>)  [0x10473d048]
+    + ! 5 ???  (in <unknown binary>)  [0x10473d194]
+    + ! 5 ???  (in <unknown binary>)  [0x10473d1b8]
+    + ! 3 ???  (in <unknown binary>)  [0x10473d0b4]
+    + ! 3 ???  (in <unknown binary>)  [0x10473d164]
+    + ! 3 ???  (in <unknown binary>)  [0x10473d2b4]
+    + ! 3 ???  (in <unknown binary>)  [0x10473dcd0]
+    + ! 3 ???  (in <unknown binary>)  [0x10473de38]
+    + ! 2 ???  (in <unknown binary>)  [0x10473d350]
+    + ! 2 ???  (in <unknown binary>)  [0x10473d360]
+    + ! 2 ???  (in <unknown binary>)  [0x10473d4a4]
+    + ! 2 ???  (in <unknown binary>)  [0x10473dba8]
+    + ! 2 ???  (in <unknown binary>)  [0x10473ddf4]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d018]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d01c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d02c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d040]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d06c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d08c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d09c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d0a8]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d138]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d15c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d24c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d2a0]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d2f0]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d418]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d4bc]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d4e0]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d4fc]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d7c4]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d7cc]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d7e0]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d7f4]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d8fc]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d900]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d910]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d95c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d984]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d988]
+    + ! 1 ???  (in <unknown binary>)  [0x10473db04]
+    + ! 1 ???  (in <unknown binary>)  [0x10473db14]
+    + ! 1 ???  (in <unknown binary>)  [0x10473db88]
+    + ! 1 ???  (in <unknown binary>)  [0x10473db98]
+    + ! 1 ???  (in <unknown binary>)  [0x10473dbb4]
+    + ! 1 ???  (in <unknown binary>)  [0x10473dce0]
+    + ! 1 ???  (in <unknown binary>)  [0x10473dd04]
+    + ! 1 ???  (in <unknown binary>)  [0x10473de0c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473de28]
+    + ! 1 ???  (in <unknown binary>)  [0x10473de6c]
+    + ! 1 ???  (in <unknown binary>)  [0x10473dea0]
+    + 53 mz1_ha_sketch(char const*, int, int, int, unsigned int, int, ha_mz1_v*, void const*, int, kvec_t_u8_warp*, kvec_t_u64_warp*, ha_pt_s*, int, int, float, st_mt_t*, int, int, void*)  (in hifiasm) + 1647  [0x1042d6fef]  sketch.cpp:581
+    + ! 26 ???  (in <unknown binary>)  [0x10472e17c]
+    + ! 9 ???  (in <unknown binary>)  [0x10472e100]
+    + ! 7 ???  (in <unknown binary>)  [0x10472e180]
+    + ! 6 ???  (in <unknown binary>)  [0x10472e13c]
+    + ! 3 ???  (in <unknown binary>)  [0x10472e0ec]
+    + ! 1 ???  (in <unknown binary>)  [0x10472e144]
+    + ! 1 ???  (in <unknown binary>)  [0x10473d2e8]
+    + 11 mz1_worker_for_insert(void*, long, int)  (in hifiasm) + 45  [0x1042d2a9d]  htab.cpp:884
+    + ! 4 ???  (in <unknown binary>)  [0x10472ca84]
+    + ! 3 ???  (in <unknown binary>)  [0x10472c9e4]
+    + ! 2 ???  (in <unknown binary>)  [0x10472cb18]
+    + ! 1 ???  (in <unknown binary>)  [0x10472ca6c]
+    + ! 1 ???  (in <unknown binary>)  [0x10472cab4]
+    + 7 ktp_worker(void*)  (in hifiasm) + 228  [0x1042b2794]  kthread.cpp:119
+    + ! 4 ???  (in <unknown binary>)  [0x104736374]
+    + ! 3 ???  (in <unknown binary>)  [0x104736390]
+    + 4 ???  (in <unknown binary>)  [0x1790248c8b4c]
+    + ! 3 ???  (in <unknown binary>)  [0x10472e18c]
+    + ! 1 ???  (in <unknown binary>)  [0x10472e188]
+    + 2 ???  (in <unknown binary>)  [0x3300000033]
+    + ! 2 ???  (in <unknown binary>)  [0x60000134ffc0]
+    + !   2 kt_for  (in hifiasm) + 283  [0x1042b236b]  kthread.cpp:71
+    + !     2 ???  (in <unknown binary>)  [0x7ff893c5bdd4]
+    + 1 ???  (in <unknown binary>)  [0x84301489848]
+    + ! 1 ???  (in <unknown binary>)  [0x10472cba0]
+    + 1 kt_for  (in hifiasm) + 283  [0x1042b236b]  kthread.cpp:71
+    + ! 1 ???  (in <unknown binary>)  [0x7ff893c5bc14]
+    + 1 szone_malloc_should_clear  (in libsystem_malloc.dylib) + 105  [0x7ff80750ac37]
+    + ! 1 small_malloc_should_clear  (in libsystem_malloc.dylib) + 215  [0x7ff80750adf0]
+    + !   1 small_malloc_from_free_list  (in libsystem_malloc.dylib) + 372  [0x7ff80750b5c0]
+    + !     1 ???  (in <unknown binary>)  [0x7ff89398c49c]
+    + 1 thread_start  (in libsystem_pthread.dylib) + 15  [0x7ff80771182f]
+    +   1 ktp_worker(void*)  (in hifiasm) + 310  [0x1042b27e6]  kthread.cpp:128
+    +     1 pthread_exit  (in libsystem_pthread.dylib) + 42  [0x7ff807713ba4]
+    +       1 _pthread_exit  (in libsystem_pthread.dylib) + 109  [0x7ff80771640c]
+    +         1 _pthread_terminate_invoke  (in libsystem_pthread.dylib) + 9  [0x7ff807713e84]
+    +           1 _pthread_terminate  (in libsystem_pthread.dylib) + 383  [0x7ff807714003]
+    +             1 _pthread_joiner_wake  (in libsystem_pthread.dylib) + 28  [0x7ff8077158c8]
+    +               1 ???  (in <unknown binary>)  [0x7ff893bf60b8]
+    +                 1 ???  (in <unknown binary>)  [0x7ff893622b80]
+    26 Thread_316440742
+      12 mz1_ha_sketch(char const*, int, int, int, unsigned int, int, ha_mz1_v*, void const*, int, kvec_t_u8_warp*, kvec_t_u64_warp*, ha_pt_s*, int, int, float, st_mt_t*, int, int, void*)  (in hifiasm) + 1647  [0x1042d6fef]  sketch.cpp:581
+      ! 5 ???  (in <unknown binary>)  [0x10472e17c]
+      ! 4 ???  (in <unknown binary>)  [0x10472e100]
+      ! 2 ???  (in <unknown binary>)  [0x10473d2e8]
+      ! 1 ???  (in <unknown binary>)  [0x10472e0ec]
+      9 mz1_worker_for_mz(void*, long, int)  (in hifiasm) + 249  [0x1042d2a29]  htab.cpp:884
+      ! 2 ???  (in <unknown binary>)  [0x10473d048]
+      ! 2 ???  (in <unknown binary>)  [0x10473d2a0]
+      ! 1 ???  (in <unknown binary>)  [0x10473d01c]
+      ! 1 ???  (in <unknown binary>)  [0x10473d2f0]
+      ! 1 ???  (in <unknown binary>)  [0x10473d418]
+      ! 1 ???  (in <unknown binary>)  [0x10473dba8]
+      ! 1 ???  (in <unknown binary>)  [0x10473dcf0]
+      3 ktp_worker(void*)  (in hifiasm) + 228  [0x1042b2794]  kthread.cpp:119
+      ! 2 ???  (in <unknown binary>)  [0x10473651c]
+      ! 1 ???  (in <unknown binary>)  [0x104736578]
+      1 mz1_worker_for_mz(void*, long, int)  (in hifiasm) + 282  [0x1042d2a4a]  htab.cpp:884
+      ! 1 ???  (in <unknown binary>)  [0x7ff8939c5460]
+      1 thread_start  (in libsystem_pthread.dylib) + 15  [0x7ff80771182f]
+        1 ktp_worker(void*)  (in hifiasm) + 310  [0x1042b27e6]  kthread.cpp:128
+          1 pthread_exit  (in libsystem_pthread.dylib) + 42  [0x7ff807713ba4]
+            1 _pthread_exit  (in libsystem_pthread.dylib) + 109  [0x7ff80771640c]
+              1 _pthread_terminate_invoke  (in libsystem_pthread.dylib) + 9  [0x7ff807713e84]
+                1 _pthread_terminate  (in libsystem_pthread.dylib) + 383  [0x7ff807714003]
+                  1 _pthread_joiner_wake  (in libsystem_pthread.dylib) + 28  [0x7ff8077158c8]
+                    1 ???  (in <unknown binary>)  [0x7ff893bf60b8]
+                      1 ???  (in <unknown binary>)  [0x7ff893622b80]
+
+Total number in stack (recursive counted multiple, when >=5):
+        8       h_ec_lchain(ha_abuf_s*, unsigned int, char*, unsigned long long, unsigned long long, unsigned long long, All_reads*, overlap_region_alloc*, Candidates_list*, double, int, int, kvec_t_u8_warp*, kvec_t_u64_warp*, st_mt_t*, unsigned int*, unsigned int*, unsigned int, unsigned int, long long, double, unsigned int, unsigned int, unsigned long long)  (in hifiasm) + 301  [0x1042eb33d]  anchor.cpp:2310
+        7       ???  (in <unknown binary>)  [0x104742758]
+        6       rs_sort_ha_an1(anchor1_t*, anchor1_t*, int, int)  (in hifiasm) + 826  [0x1042dbbfa]  anchor.cpp:26
+
+Sort by top of stack, same collapsed (when >= 5):
+        ???  (in Rosetta Runtime Routines)  [0x7ff7ffe7bed0]        453
+        ???  (in <unknown binary>)  [0x7ff893622b80]        205
+        ???  (in <unknown binary>)  [0x10472e17c]        35
+        ???  (in <unknown binary>)  [0x104742758]        24
+        ???  (in <unknown binary>)  [0x104742a70]        15
+        ???  (in <unknown binary>)  [0x10472e100]        14
+        ???  (in <unknown binary>)  [0x10473d078]        14
+        ???  (in <unknown binary>)  [0x104742a4c]        13
+        ???  (in <unknown binary>)  [0x104572d24]        10
+        ???  (in <unknown binary>)  [0x10473d048]        10
+        ???  (in <unknown binary>)  [0x104742830]        10
+        ???  (in <unknown binary>)  [0x104742a20]        10
+        ???  (in <unknown binary>)  [0x104742900]        9
+        ???  (in <unknown binary>)  [0x10472c634]        8
+        ???  (in <unknown binary>)  [0x104742850]        8
+        ???  (in <unknown binary>)  [0x10472e180]        7
+        ???  (in <unknown binary>)  [0x10473d1b8]        7
+        ???  (in <unknown binary>)  [0x10473d2c0]        7
+        ???  (in <unknown binary>)  [0x10472e13c]        6
+        ???  (in <unknown binary>)  [0x10473d2b4]        6
+        ???  (in <unknown binary>)  [0x104742894]        6
+        ???  (in <unknown binary>)  [0x1047428dc]        6
+        ???  (in <unknown binary>)  [0x1047429e0]        6
+        ???  (in <unknown binary>)  [0x10472e0ec]        5
+        ???  (in <unknown binary>)  [0x10473d194]        5
+        ???  (in <unknown binary>)  [0x104742738]        5
+
+Binary Images:
+       0x10415a000 -        0x10449aeef +hifiasm (0) <A883FC00-91C0-3E5C-B718-8B49DC59E82F> /Users/*/hifiasm
+       0x20478b000 -        0x20483784f  dyld (1.0.0 - 1387) <CF55CA34-3ECB-38F3-9E3E-E20592C197BE> /usr/lib/dyld
+    0x7ff8072a9000 -     0x7ff8072ed093  libobjc.A.dylib (951.7) <103FE602-04A8-3606-A748-3CB2A033802F> /usr/lib/libobjc.A.dylib
+    0x7ff8072ee000 -     0x7ff80731ca9f  libdyld.dylib (1387) <576B6A23-6A9E-3910-B3E5-0790731BB4AB> /usr/lib/system/libdyld.dylib
+    0x7ff8073ca000 -     0x7ff8073cd6e8  libsystem_blocks.dylib (96) <33F2AE3F-12EE-3467-8481-698BC42C52F1> /usr/lib/system/libsystem_blocks.dylib
+    0x7ff8073ce000 -     0x7ff807421041  libxpc.dylib (3102.160.5) <19C9DA96-742F-3A7D-A22D-E1DF683CE47B> /usr/lib/system/libxpc.dylib
+    0x7ff807422000 -     0x7ff807441749  libsystem_trace.dylib (1861.160.4) <79D484CC-C253-3348-B56E-366A4A97D051> /usr/lib/system/libsystem_trace.dylib
+    0x7ff807442000 -     0x7ff80750894f  libcorecrypto.dylib (1922.160.10) <6E14793F-E8ED-31CE-B255-603A9CFF4CF3> /usr/lib/system/libcorecrypto.dylib
+    0x7ff807509000 -     0x7ff80755adcf  libsystem_malloc.dylib (812.160.5) <1D09BF46-BD85-3C22-9CB9-D04963024069> /usr/lib/system/libsystem_malloc.dylib
+    0x7ff80755b000 -     0x7ff8075a2d91  libdispatch.dylib (1542.160.2) <EEDF9EFE-1B9B-39AC-B37F-BA6F1FA18CEC> /usr/lib/system/libdispatch.dylib
+    0x7ff8075a3000 -     0x7ff8075a5d43  libsystem_featureflags.dylib (103) <2AF93358-8BB8-3390-8847-994AB8425E86> /usr/lib/system/libsystem_featureflags.dylib
+    0x7ff8075a6000 -     0x7ff80762de9f  libsystem_c.dylib (1752.160.4) <D8E26E42-0A43-3361-B0A8-B45C3BB10F19> /usr/lib/system/libsystem_c.dylib
+    0x7ff80762e000 -     0x7ff8076b8b63  libc++.1.dylib (2100.43) <DC8BE9A5-9501-3439-9189-9E16C26DF6B3> /usr/lib/libc++.1.dylib
+    0x7ff8076b9000 -     0x7ff8076d05f7  libc++abi.dylib (2100.43) <DC940B98-BF91-3E69-9821-7E2BBF9631CD> /usr/lib/libc++abi.dylib
+    0x7ff8076d1000 -     0x7ff80770f5af  libsystem_kernel.dylib (12377.161.14) <0E16C3E3-E224-378F-9FDC-28BC144F39AF> /usr/lib/system/libsystem_kernel.dylib
+    0x7ff807710000 -     0x7ff80771bebf  libsystem_pthread.dylib (539.100.4) <A55CF178-EA25-3CC0-8BCD-A4209F2ACD1D> /usr/lib/system/libsystem_pthread.dylib
+    0x7ff80771c000 -     0x7ff807725ebf  libsystem_platform.dylib (375.120.2) <CD621568-6D00-376A-B8DA-6B794DADAFE4> /usr/lib/system/libsystem_platform.dylib
+    0x7ff807726000 -     0x7ff8077542a7  libsystem_info.dylib (600) <D5713F2F-7E03-3AEE-82DA-89F175842724> /usr/lib/system/libsystem_info.dylib
+    0x7ff80b0c5000 -     0x7ff80b0cf70f  libsystem_darwin.dylib (1752.160.4) <15F72020-5373-3B02-B29D-B9F2D93FE254> /usr/lib/system/libsystem_darwin.dylib
+    0x7ff80b50d000 -     0x7ff80b51e2b7  libsystem_notify.dylib (348.160.3) <19A5D538-D6BE-34A2-B28D-7648B10CEB2B> /usr/lib/system/libsystem_notify.dylib
+    0x7ff80d907000 -     0x7ff80d9204a7  libsystem_networkextension.dylib (2226.161.1) <75D4DD3E-69BB-3E37-82B3-4222BA907541> /usr/lib/system/libsystem_networkextension.dylib
+    0x7ff80d99e000 -     0x7ff80d9b51bf  libsystem_asl.dylib (406) <478E2407-26A1-3545-AA66-B9E4806FDF5D> /usr/lib/system/libsystem_asl.dylib
+    0x7ff80f778000 -     0x7ff80f77fc57  libsystem_symptoms.dylib (2169.160.3) <5B6FB9F4-F87A-3849-BE0B-A63706010384> /usr/lib/system/libsystem_symptoms.dylib
+    0x7ff8140bf000 -     0x7ff8140f5a3b  libsystem_containermanager.dylib (725.160.3) <A00409FB-484B-3970-A4FD-85BB4960230E> /usr/lib/system/libsystem_containermanager.dylib
+    0x7ff81552d000 -     0x7ff81553090f  libsystem_configuration.dylib (1405.160.3) <198D5252-EA49-3D24-A345-474D0560D060> /usr/lib/system/libsystem_configuration.dylib
+    0x7ff815531000 -     0x7ff815537bf7  libsystem_sandbox.dylib (2680.160.6) <A1A25866-BB0A-3525-9044-839F1EBCC15E> /usr/lib/system/libsystem_sandbox.dylib
+    0x7ff816e9f000 -     0x7ff816ea1dbb  libquarantine.dylib (196.160.2) <F734C4CD-5330-357E-B3B8-3721095096BE> /usr/lib/system/libquarantine.dylib
+    0x7ff8177b0000 -     0x7ff8177b698f  libsystem_coreservices.dylib (191.5.1) <B0BDCA58-7438-3E13-9C05-59660B573A77> /usr/lib/system/libsystem_coreservices.dylib
+    0x7ff817c99000 -     0x7ff817cac5eb  libz.1.dylib (100.120.1) <5F30060B-9283-3F0C-B36A-003C2A25D967> /usr/lib/libz.1.dylib
+    0x7ff817cad000 -     0x7ff817d2522f  libsystem_m.dylib (3312.100.1) <40868CB5-EC22-3535-930D-4D0499A048E4> /usr/lib/system/libsystem_m.dylib
+    0x7ff817d27000 -     0x7ff817d2a63f  libmacho.dylib (1387) <0A615DBA-558B-3500-86E9-5DE7DA349727> /usr/lib/system/libmacho.dylib
+    0x7ff817d42000 -     0x7ff817d4df57  libcommonCrypto.dylib (600035) <D35EDE6C-94CA-3DCD-A906-ABD86DA57F77> /usr/lib/system/libcommonCrypto.dylib
+    0x7ff817d4e000 -     0x7ff817d56567  libunwind.dylib (2100.2) <8EDA0474-8AC2-37B8-B6B7-B4B712A6FA1F> /usr/lib/system/libunwind.dylib
+    0x7ff817d5f000 -     0x7ff817d6aa7f  libcopyfile.dylib (240.160.2.0.1) <E9D173D3-075B-3DB2-8204-0C56346FB9BC> /usr/lib/system/libcopyfile.dylib
+    0x7ff817d6b000 -     0x7ff817d72aff  libcompiler_rt.dylib (103.3) <C5CCBE5A-9844-3EF7-80A9-303679EA5AA3> /usr/lib/system/libcompiler_rt.dylib
+    0x7ff817d73000 -     0x7ff817d7776b  libsystem_collections.dylib (1752.160.4) <A22B7276-A6B6-35CC-8635-E502BE26FA95> /usr/lib/system/libsystem_collections.dylib
+    0x7ff817d78000 -     0x7ff817d7b107  libsystem_secinit.dylib (168.100.7) <03FEC1A7-6AB4-3ED4-80A2-28AABFB4A95D> /usr/lib/system/libsystem_secinit.dylib
+    0x7ff817d7c000 -     0x7ff817d7e80f  libremovefile.dylib (85.100.6) <40EACBDA-A392-3D22-822D-AE6F3A0E4FE6> /usr/lib/system/libremovefile.dylib
+    0x7ff817d7f000 -     0x7ff817d7fb37  libkeymgr.dylib (31) <963CDDED-015D-3B77-8B30-B0CE28AA7B8B> /usr/lib/system/libkeymgr.dylib
+    0x7ff817d80000 -     0x7ff817d8862f  libsystem_dnssd.dylib (2881.160.4) <52521127-FB30-3A8E-A364-EE73C6A18130> /usr/lib/system/libsystem_dnssd.dylib
+    0x7ff817d89000 -     0x7ff817d8e003  libcache.dylib (95) <9F17FD1D-C57E-32CF-A3B8-37BF7D4FA9E6> /usr/lib/system/libcache.dylib
+    0x7ff817d8f000 -     0x7ff817d90b2b  libSystem.B.dylib (1356) <3229D4F7-FE40-3BE4-BCB9-F21F1C734B21> /usr/lib/libSystem.B.dylib
+    0x7ffe0b0a3000 -     0x7ffe0b0aa56f  libRosetta.dylib (367.9) <7A1D9CE0-41E8-3D9A-B8A4-FCC3F43674B5> /usr/lib/libRosetta.dylib
+    0x7ffe0ce1a000 -     0x7ffe0ce1e003  libsystem_darwindirectory.dylib (122) <81911493-D73C-3AE8-B547-00236D7BFC3B> /usr/lib/system/libsystem_darwindirectory.dylib
+    0x7ffe0ce1f000 -     0x7ffe0ce29253  libsystem_eligibility.dylib (319.160.17) <41D00E59-199C-3C4B-A641-36794AD637E7> /usr/lib/system/libsystem_eligibility.dylib
+    0x7ffe0ce2a000 -     0x7ffe0ce31ffb  libsystem_sanitizers.dylib (26.1) <81684A61-0905-3ED7-9872-C262429B0675> /usr/lib/system/libsystem_sanitizers.dylib
+    0x7ffe0ce32000 -     0x7ffe0ce32ba7  libsystem_trial.dylib (474.2.18.2) <C3DAE42B-23E1-3B50-8B7B-99F20C1D3FDE> /usr/lib/system/libsystem_trial.dylib

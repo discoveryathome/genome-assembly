@@ -1,0 +1,19 @@
+{
+  "measured_assembly_runs": 42,
+  "warmup_runs": 6,
+  "sum_measured_wall_seconds": 1094.5227081232006,
+  "sum_measured_cpu_seconds": 285.198697,
+  "peak_rss_range_MiB": [
+    48.03125,
+    82.9140625
+  ],
+  "cpu_seconds_range": [
+    3.803924,
+    11.612165
+  ],
+  "all_cases_quality_pass": true,
+  "all_cases_exact_all_gfa": true,
+  "all_cases_screening_pass": false,
+  "performance_promotion": "withheld: severe host contention, Rosetta, no independent replay",
+  "scientific_generalization": "three synthetic miniature circular genomes only; published heldouts are now regression inputs"
+}

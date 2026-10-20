@@ -1,0 +1,26 @@
+{
+  "id": "starter_dev_balanced",
+  "split": "development",
+  "seed": 196613,
+  "length": 60000,
+  "coverage": 30,
+  "read_min": 10000,
+  "read_max": 15000,
+  "gc": 0.5,
+  "substitution_rate": 0.001,
+  "indel_rate": 0.0002,
+  "repeat_length": 3000,
+  "circular": true,
+  "read_count": 144,
+  "read_bases": 1819240,
+  "actual_coverage": 30.320666666666668,
+  "repeat_coordinates": [
+    12000,
+    36000,
+    3000
+  ],
+  "sha256": {
+    "reference.fa": "6382baee7b3ac1fa8164aec8978afd91f2841c03b847cd282490ee8f48038262",
+    "reads.fa": "bc71495a9ed8617c2b33f7b97f8c0b500a32768f1977883715a91a6c3408c36b"
+  }
+}

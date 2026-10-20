@@ -1,0 +1,31 @@
+{
+  "positive": {
+    "misassemblies": 0.0,
+    "local_misassemblies": 0.0,
+    "genome_fraction": 100.0,
+    "duplication_ratio": 1.0,
+    "n50": 250000.0,
+    "ng50": 250000.0,
+    "nga50": 250000.0,
+    "contigs": 1.0,
+    "total_length": 250000.0,
+    "mismatches_per_100kb": 0.0,
+    "indels_per_100kb": 0.0,
+    "unaligned_length": 0.0
+  },
+  "negative": {
+    "misassemblies": 2.0,
+    "local_misassemblies": 0.0,
+    "genome_fraction": 99.999,
+    "duplication_ratio": 1.0,
+    "n50": 250000.0,
+    "ng50": 250000.0,
+    "nga50": 190000.0,
+    "contigs": 1.0,
+    "total_length": 250000.0,
+    "mismatches_per_100kb": 0.0,
+    "indels_per_100kb": 0.0,
+    "unaligned_length": 0.0
+  },
+  "negative_rejected": true
+}

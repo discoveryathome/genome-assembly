@@ -1,0 +1,42 @@
+{
+  "task": "overlap-seeding-01",
+  "priority_revision": 1,
+  "scope_status": "refined",
+  "reason": "Single size-only pivot from 250\u2013400 kbp to a frozen 60\u2013100 kbp starter tier after sizing under severe host contention; candidate/gates/repetitions unchanged.",
+  "outcome": "completed parameter experiment; performance promotion withheld",
+  "evidence_level": "local-only",
+  "algorithm_novelty": "none claimed: existing minimizer-window parameter",
+  "next_questions": [
+    {
+      "question": "Does the CPU improvement survive an idle native-x86 replay?",
+      "why_it_matters": "Host contention and Rosetta prevent a portable speed claim.",
+      "first_step": [
+        "python3",
+        "scripts/benchmark.py",
+        "--out",
+        "reports/replay-001"
+      ],
+      "blocked_by": "An idle host and compatible QUAST Python"
+    },
+    {
+      "question": "Can a short session improve a measured seed/chaining kernel while preserving all anchors?",
+      "why_it_matters": "Parameter tuning does not demonstrate repeatable algorithmic progress.",
+      "first_step": [
+        "python3",
+        "scripts/first_step.py",
+        "overlap-seeding"
+      ],
+      "blocked_by": "A native profile and a differential kernel test corpus"
+    },
+    {
+      "question": "How should duplicated circular closure be scored for a real public microbial dataset?",
+      "why_it_matters": "Current synthetic baseline contains duplication and a reported relocation.",
+      "first_step": [
+        "python3",
+        "scripts/first_step.py",
+        "verifier"
+      ],
+      "blocked_by": "Domain review; no reference-based repair during assembly"
+    }
+  ]
+}

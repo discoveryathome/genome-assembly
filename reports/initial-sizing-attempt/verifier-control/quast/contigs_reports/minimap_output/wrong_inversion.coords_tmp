@@ -1,0 +1,3 @@
+wrong	250000	119999	250000	+	synthetic_circle	250000	119999	250000	130001	130001	60	NM:i:0	ms:i:130001	AS:i:130001	nn:i:0	tp:A:P	cm:i:13039	s1:i:129990	s2:i:2982	de:f:0	rl:i:0	cg:Z:130001M	cs:Z::130001
+wrong	250000	59999	120001	-	synthetic_circle	250000	59999	120001	60002	60002	60	NM:i:0	ms:i:60002	AS:i:60002	nn:i:0	tp:A:P	cm:i:5996	s1:i:59992	s2:i:0	de:f:0	rl:i:0	cg:Z:60002M	cs:Z::60002
+wrong	250000	0	60001	+	synthetic_circle	250000	0	60001	60001	60001	60	NM:i:0	ms:i:60001	AS:i:60001	nn:i:0	tp:A:P	cm:i:6004	s1:i:59982	s2:i:2982	de:f:0	rl:i:0	cg:Z:60001M	cs:Z::60001

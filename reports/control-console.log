@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/scripts/benchmark.py", line 249, in <module>
+    main()
+    ~~~~^^
+  File "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/scripts/benchmark.py", line 202, in main
+    control(out, config)
+    ~~~~~~~^^^^^^^^^^^^^
+  File "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/scripts/benchmark.py", line 110, in control
+    metrics = quast([(out/'truth.fa').resolve(), (out/'wrong_inversion.fa').resolve()], ref, out/'quast')
+  File "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/scripts/benchmark.py", line 62, in quast
+    subprocess.run(cmd, stdout=log, stderr=subprocess.STDOUT, check=True, timeout=120)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/opt/homebrew/opt/python@3.14/bin/python3.14', '/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/vendor/quast/quast.py', '/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/control-initial/truth.fa', '/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/control-initial/wrong_inversion.fa', '-r', '/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/data/dev_balanced/reference.fa', '-o', '/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/control-initial/quast', '-t', '1', '-m', '500', '--no-plots', '--no-html', '--no-icarus', '--no-sv', '--no-read-stats', '--strict-NA']' returned non-zero exit status 1.

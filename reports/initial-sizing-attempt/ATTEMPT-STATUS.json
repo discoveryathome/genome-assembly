@@ -1,0 +1,5 @@
+{
+  "status": "stopped-after-sizing-warmups",
+  "reason": "88.4 s Hifiasm baseline wall vs 16.8 CPU seconds under severe host contention. Full original matrix exceeds contributor timebox. Candidate remains window101; move to a separately frozen smaller starter suite. Warmups are not controlled performance evidence.",
+  "completed_measured_pairs": 0
+}

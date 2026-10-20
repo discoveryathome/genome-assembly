@@ -1,0 +1,19 @@
+[
+  "/usr/bin/python3",
+  "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/vendor/quast/quast.py",
+  "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_dev_balanced-ab-1-A/assembly.fa",
+  "-r",
+  "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/data/starter_dev_balanced/reference.fa",
+  "-o",
+  "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_dev_balanced-ab-1-A/quast",
+  "-t",
+  "1",
+  "-m",
+  "500",
+  "--no-plots",
+  "--no-html",
+  "--no-icarus",
+  "--no-sv",
+  "--no-read-stats",
+  "--strict-NA"
+]

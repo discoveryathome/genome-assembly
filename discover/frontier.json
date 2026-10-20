@@ -1,13 +1,66 @@
 {
   "schema": "discover-frontier/v0",
-  "statement": "Hifiasm's published phased assembly graph approach and double-graph extension establish accurate long-read assembly capabilities under the papers' conditions; no local speedup or quality-preservation result has yet been measured for the proposed window-51 versus window-101 benchmark.",
-  "status": "Research brief and harness prepared; scope confirmation pending before build and measurement.",
-  "evidence_level": ["author-checked"],
-  "claim_kind": ["argument"],
-  "scope": "Literature-backed starting point only. LOCAL synthetic haploid 250–400 kbp pilot; no global optimum, biological or human-generalization claim.",
-  "assumptions": [{"id": "local-measurement", "statement": "The local verifier and candidate must be run before reporting speed, quality or memory outcomes.", "status": "open"}],
-  "sources": ["https://doi.org/10.1038/s41592-020-01056-5", "https://doi.org/10.1038/s41592-024-02269-8", "https://doi.org/10.1093/bioinformatics/btt086", "research/BRIEF.md"],
+  "statement": "The unchanged pinned Hifiasm window-51 baseline is recorded for three synthetic 60\u2013100 kbp cases. Window 101 reduced indexed seed occurrences by 48.4\u201348.9% and yielded byte-identical primary FASTA/GFA and all GFA outputs in five paired comparisons per case, with equal QUAST quality. All three performance screening gates failed; no performance improvement is promoted.",
+  "status": "Completed local starter trial; baseline and observations author-checked only. Independent replay and maintainer review pending.",
+  "evidence_level": [
+    "author-checked"
+  ],
+  "claim_kind": [
+    "measured"
+  ],
+  "scope": "Three synthetic haploid circular genomes; one development and two pre-frozen heldouts. Mac14,2 ARM64, source-built x86 Hifiasm under Rosetta, severe external contention. CPU reductions 5.99\u20139.88% are exploratory; no arbitrary-input exactness or real-read generalization claim.",
+  "assumptions": [
+    {
+      "id": "native-replay",
+      "statement": "Performance must survive an independent idle native-x86 replay.",
+      "status": "open"
+    },
+    {
+      "id": "generalization",
+      "statement": "Real nonhuman reads, larger genomes and fresh heldouts remain untested.",
+      "status": "open"
+    },
+    {
+      "id": "review",
+      "statement": "Maintainer has agreed to ownership but has not scientifically accepted the findings.",
+      "status": "open"
+    }
+  ],
+  "sources": [
+    "reports/experiment/REPORT.md",
+    "reports/trial/ASSESSMENT.md",
+    "packages/window101/SOURCES.json",
+    "research/BRIEF.md"
+  ],
   "review": "discover/review.md",
   "updated_on": "2026-10-20",
-  "pinned_heads": {"hifiasm": "ec9a8b222d149d25b7355e83765698640d59b189", "quast": "38373fb6454604197d45b047ae61f82e68b61a74"}
+  "pinned_heads": {
+    "hifiasm": "ec9a8b222d149d25b7355e83765698640d59b189",
+    "quast": "38373fb6454604197d45b047ae61f82e68b61a74"
+  },
+  "reproduce": "python3 scripts/verify.py reports/experiment",
+  "reproduce_full": "python3 scripts/benchmark.py --out reports/replay-001",
+  "reproduce_minutes": 2,
+  "prerequisites": [
+    "Python 3.9+ for offline evidence check; no vendor binary needed",
+    "For full replay first run the permission-aware pinned bootstrap; see README.md",
+    "Idle native-x86 host required before a portable performance claim"
+  ],
+  "artifacts": [
+    {
+      "path": "reports/experiment/SHA256.json",
+      "sha256": "ef572772cfac91a22c50dce1f9b0fb2d75369cba70c00a311e01a8fa548105b5",
+      "role": "raw evidence hash inventory"
+    },
+    {
+      "path": "reports/experiment/baseline.json",
+      "sha256": "2a112859c91dcd5fbeaae67fedd8aa863d10556f7e29b2f6dfc7458fd14c6cf5",
+      "role": "unchanged correctness and resource baseline"
+    },
+    {
+      "path": "reports/experiment/summary.json",
+      "sha256": "57ceba36af81efe639e4477cde3600ca209781c13bbb3c9678ca89e94d9a6ae9",
+      "role": "paired quality and resource screening"
+    }
+  ]
 }

@@ -1,0 +1,132 @@
+S	utg000001l	*	LN:i:19815	rd:i:17
+A	utg000001l	0	+	read_164	0	9911	id:i:164	HG:A:a
+A	utg000001l	426	+	read_153	0	11069	id:i:153	HG:A:a
+A	utg000001l	1672	-	read_182	0	11296	id:i:182	HG:A:a
+A	utg000001l	3777	+	read_195	0	9354	id:i:195	HG:A:a
+A	utg000001l	4670	+	read_1	0	8556	id:i:1	HG:A:a
+A	utg000001l	4890	-	read_132	0	9353	id:i:132	HG:A:a
+A	utg000001l	5082	+	read_6	0	9989	id:i:6	HG:A:a
+A	utg000001l	5326	+	read_8	0	10785	id:i:8	HG:A:a
+A	utg000001l	6201	-	read_157	0	11032	id:i:157	HG:A:a
+A	utg000001l	8065	+	read_180	0	11750	id:i:180	HG:A:a
+S	utg000002l	*	LN:i:39645	rd:i:14
+A	utg000002l	0	+	read_81	0	11211	id:i:81	HG:A:a
+A	utg000002l	1258	-	read_50	0	10988	id:i:50	HG:A:a
+A	utg000002l	2517	-	read_72	0	11366	id:i:72	HG:A:a
+A	utg000002l	5403	-	read_169	0	8952	id:i:169	HG:A:a
+A	utg000002l	5461	+	read_177	0	11226	id:i:177	HG:A:a
+A	utg000002l	7785	+	read_139	0	11821	id:i:139	HG:A:a
+A	utg000002l	9452	+	read_108	0	10467	id:i:108	HG:A:a
+A	utg000002l	10094	-	read_114	0	10192	id:i:114	HG:A:a
+A	utg000002l	10128	+	read_151	0	11587	id:i:151	HG:A:a
+A	utg000002l	13891	+	read_3	0	11082	id:i:3	HG:A:a
+A	utg000002l	14562	+	read_40	0	11698	id:i:40	HG:A:a
+A	utg000002l	16483	+	read_41	0	10919	id:i:41	HG:A:a
+A	utg000002l	19530	-	read_57	0	8957	id:i:57	HG:A:a
+A	utg000002l	19554	-	read_127	0	10209	id:i:127	HG:A:a
+A	utg000002l	20353	+	read_196	0	9888	id:i:196	HG:A:a
+A	utg000002l	21082	+	read_77	0	11498	id:i:77	HG:A:a
+A	utg000002l	23084	-	read_198	0	10785	id:i:198	HG:A:a
+A	utg000002l	23843	+	read_183	0	11559	id:i:183	HG:A:a
+A	utg000002l	25783	+	read_83	0	11302	id:i:83	HG:A:a
+A	utg000002l	28478	+	read_99	0	9985	id:i:99	HG:A:a
+A	utg000002l	29259	-	read_74	0	10386	id:i:74	HG:A:a
+S	utg000003l	*	LN:i:18498	rd:i:12
+A	utg000003l	0	-	read_112	0	11019	id:i:112	HG:A:a
+A	utg000003l	926	+	read_59	0	11139	id:i:59	HG:A:a
+A	utg000003l	2023	+	read_10	0	11682	id:i:10	HG:A:a
+A	utg000003l	2426	+	read_101	0	11770	id:i:101	HG:A:a
+A	utg000003l	3501	-	read_173	0	11222	id:i:173	HG:A:a
+A	utg000003l	5408	-	read_85	0	10701	id:i:85	HG:A:a
+A	utg000003l	5515	+	read_36	0	10744	id:i:36	HG:A:a
+A	utg000003l	8285	+	read_33	0	8170	id:i:33	HG:A:a
+A	utg000003l	8494	+	read_5	0	8678	id:i:5	HG:A:a
+A	utg000003l	9159	-	read_120	0	9339	id:i:120	HG:A:a
+S	utg000004l	*	LN:i:11521	rd:i:3
+A	utg000004l	0	+	read_7	0	11521	id:i:7	HG:A:a
+S	utg000005l	*	LN:i:17733	rd:i:1
+A	utg000005l	0	-	read_140	0	11541	id:i:140	HG:A:a
+A	utg000005l	6350	+	read_17	0	11383	id:i:17	HG:A:a
+S	utg000006l	*	LN:i:15535	rd:i:10
+A	utg000006l	0	-	read_103	0	11000	id:i:103	HG:A:a
+A	utg000006l	950	+	read_128	0	11702	id:i:128	HG:A:a
+A	utg000006l	3394	+	read_144	0	9548	id:i:144	HG:A:a
+A	utg000006l	3453	+	read_20	0	10282	id:i:20	HG:A:a
+A	utg000006l	3736	-	read_122	0	10905	id:i:122	HG:A:a
+A	utg000006l	3779	+	read_165	0	11756	id:i:165	HG:A:a
+S	utg000007l	*	LN:i:15940	rd:i:12
+A	utg000007l	0	+	read_116	0	11349	id:i:116	HG:A:a
+A	utg000007l	319	+	read_98	0	11538	id:i:98	HG:A:a
+A	utg000007l	778	+	read_23	0	11855	id:i:23	HG:A:a
+A	utg000007l	3617	+	read_47	0	9425	id:i:47	HG:A:a
+A	utg000007l	4159	-	read_105	0	9445	id:i:105	HG:A:a
+A	utg000007l	4167	-	read_194	0	10715	id:i:194	HG:A:a
+A	utg000007l	4819	-	read_32	0	11121	id:i:32	HG:A:a
+S	utg000008l	*	LN:i:18596	rd:i:11
+A	utg000008l	0	+	read_143	0	11334	id:i:143	HG:A:a
+A	utg000008l	730	-	read_38	0	11270	id:i:38	HG:A:a
+A	utg000008l	3561	+	read_24	0	11001	id:i:24	HG:A:a
+A	utg000008l	4694	+	read_76	0	11900	id:i:76	HG:A:a
+A	utg000008l	6209	+	read_188	0	11304	id:i:188	HG:A:a
+A	utg000008l	6926	-	read_64	0	11670	id:i:64	HG:A:a
+S	utg000009l	*	LN:i:17415	rd:i:1
+A	utg000009l	0	-	read_79	0	10180	id:i:79	HG:A:a
+A	utg000009l	3443	+	read_71	0	9339	id:i:71	HG:A:a
+A	utg000009l	7098	+	read_31	0	10317	id:i:31	HG:A:a
+S	utg000010l	*	LN:i:12431	rd:i:2
+A	utg000010l	0	+	read_75	0	11079	id:i:75	HG:A:a
+A	utg000010l	343	+	read_136	0	11114	id:i:136	HG:A:a
+A	utg000010l	720	+	read_168	0	10760	id:i:168	HG:A:a
+A	utg000010l	887	+	read_174	0	11544	id:i:174	HG:A:a
+S	utg000011l	*	LN:i:12870	rd:i:4
+A	utg000011l	0	+	read_192	0	11848	id:i:192	HG:A:a
+A	utg000011l	944	+	read_148	0	11281	id:i:148	HG:A:a
+A	utg000011l	1029	+	read_94	0	11841	id:i:94	HG:A:a
+S	utg000012l	*	LN:i:14069	rd:i:1
+A	utg000012l	0	+	read_97	0	11590	id:i:97	HG:A:a
+A	utg000012l	2619	+	read_135	0	11450	id:i:135	HG:A:a
+S	utg000013l	*	LN:i:8965	rd:i:0
+A	utg000013l	0	+	read_115	0	8965	id:i:115	HG:A:a
+S	utg000014l	*	LN:i:13535	rd:i:0
+A	utg000014l	0	+	read_142	0	10048	id:i:142	HG:A:a
+A	utg000014l	1978	+	read_193	0	11557	id:i:193	HG:A:a
+L	utg000001l	+	utg000007l	+	9808M	L1:i:10007	L2:i:0
+L	utg000001l	-	utg000002l	+	9048M	L1:i:10767	L2:i:0
+L	utg000001l	-	utg000006l	+	4016M	L1:i:15799	L2:i:0
+L	utg000002l	+	utg000011l	+	9709M	L1:i:29936	L2:i:0
+L	utg000002l	+	utg000013l	-	6738M	L1:i:32907	L2:i:0
+L	utg000002l	-	utg000001l	+	9048M	L1:i:30597	L2:i:0
+L	utg000002l	-	utg000012l	-	6626M	L1:i:33019	L2:i:0
+L	utg000003l	+	utg000008l	-	8721M	L1:i:9777	L2:i:0
+L	utg000003l	+	utg000005l	-	7575M	L1:i:10923	L2:i:0
+L	utg000003l	-	utg000004l	+	10663M	L1:i:7835	L2:i:0
+L	utg000003l	-	utg000009l	-	9449M	L1:i:9049	L2:i:0
+L	utg000004l	+	utg000006l	-	10110M	L1:i:1411	L2:i:0
+L	utg000004l	+	utg000014l	-	8657M	L1:i:2864	L2:i:0
+L	utg000004l	-	utg000003l	+	10663M	L1:i:858	L2:i:0
+L	utg000005l	+	utg000003l	-	7575M	L1:i:10158	L2:i:0
+L	utg000005l	-	utg000007l	-	8869M	L1:i:8864	L2:i:0
+L	utg000006l	+	utg000004l	-	10110M	L1:i:5425	L2:i:0
+L	utg000006l	-	utg000010l	+	8914M	L1:i:6621	L2:i:0
+L	utg000006l	-	utg000001l	+	4016M	L1:i:11519	L2:i:0
+L	utg000007l	+	utg000005l	+	8869M	L1:i:7071	L2:i:0
+L	utg000007l	+	utg000008l	+	8587M	L1:i:7353	L2:i:0
+L	utg000007l	-	utg000001l	-	9808M	L1:i:6132	L2:i:0
+L	utg000007l	-	utg000012l	+	6484M	L1:i:9456	L2:i:0
+L	utg000008l	+	utg000003l	-	8721M	L1:i:9875	L2:i:0
+L	utg000008l	-	utg000007l	-	8587M	L1:i:10009	L2:i:0
+L	utg000009l	+	utg000003l	+	9449M	L1:i:7966	L2:i:0
+L	utg000009l	-	utg000011l	-	7457M	L1:i:9958	L2:i:0
+L	utg000010l	+	utg000011l	-	9291M	L1:i:3140	L2:i:0
+L	utg000010l	-	utg000006l	+	8914M	L1:i:3517	L2:i:0
+L	utg000011l	+	utg000010l	-	9291M	L1:i:3579	L2:i:0
+L	utg000011l	+	utg000009l	+	7457M	L1:i:5413	L2:i:0
+L	utg000011l	-	utg000002l	-	9709M	L1:i:3161	L2:i:0
+L	utg000012l	+	utg000002l	+	6626M	L1:i:7443	L2:i:0
+L	utg000012l	+	utg000014l	+	1047M	L1:i:13022	L2:i:0
+L	utg000012l	-	utg000007l	+	6484M	L1:i:7585	L2:i:0
+L	utg000013l	+	utg000002l	-	6738M	L1:i:2227	L2:i:0
+L	utg000013l	-	utg000014l	+	4293M	L1:i:4672	L2:i:0
+L	utg000014l	+	utg000004l	-	8657M	L1:i:4878	L2:i:0
+L	utg000014l	-	utg000013l	+	4293M	L1:i:9242	L2:i:0
+L	utg000014l	-	utg000012l	-	1047M	L1:i:12488	L2:i:0

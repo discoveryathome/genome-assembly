@@ -12,6 +12,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def verify(out, regenerate=True):
+    inventory = out/'SHA256.json'
+    if inventory.exists():
+        for relative, expected in json.loads(inventory.read_text()).items():
+            artifact = (out/relative).resolve()
+            assert artifact.is_relative_to(out.resolve()), 'Artifact escaped evidence directory'
+            assert artifact.is_file() and sha(artifact) == expected, 'Evidence hash mismatch: ' + relative
     environment = json.loads((out/'environment.json').read_text())
     config_path = (ROOT/environment['config_path']).resolve()
     assert config_path.is_relative_to(ROOT), 'Configuration escaped pilot'

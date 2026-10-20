@@ -1,0 +1,47 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [synthetic_circle]
+	Total Regions: 1
+	Total Region Length: 60000
+Analyzing contigs...
+CONTIG: truth (60000bp)
+Best alignment score: 60000.0 (LEN: 60000, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 1 60000 | 1 60000 | 60000 60000 | 100.0 | synthetic_circle truth
+
+Analyzing coverage...
+Writing SNPs into /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/verifier-control/quast/contigs_reports/minimap_output/truth.used_snps
+
+Analysis is finished!
+Founded SNPs were written into /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/verifier-control/quast/contigs_reports/minimap_output/truth.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap ("Extra" Aligned Bases): 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Bases in Fully and Partially Unaligned Contigs: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+"Extra" Aligned Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used (there is no "extra" aligned bases).
+
+	Covered Bases in Reference: 60000
+	Raw Aligned Bases in Assembly: 60000
+	Total Aligned Bases in Assembly (with "Extras"): 60000
+
+	SNPs: 0
+	Insertions: 0
+	Deletions: 0
+

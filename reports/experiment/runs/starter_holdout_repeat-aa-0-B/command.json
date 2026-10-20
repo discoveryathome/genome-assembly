@@ -1,0 +1,17 @@
+[
+  "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/vendor/hifiasm/hifiasm",
+  "-t",
+  "1",
+  "-f",
+  "0",
+  "-l",
+  "0",
+  "--primary",
+  "-k",
+  "51",
+  "-w",
+  "51",
+  "-o",
+  "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-aa-0-B/asm",
+  "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/data/starter_holdout_repeat/reads.fa"
+]

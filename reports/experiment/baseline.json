@@ -1,0 +1,191 @@
+{
+  "starter_dev_balanced": {
+    "hashes": {
+      "primary_gfa": "a88e66399c3c06be9eb804fae834d81c0d2351af588596a27441c43565880f70",
+      "primary_fasta": "d0425f64e4e8c15cf2902a4bd71c6d5edf2e98ac0e29dbd5e9ca00095e897d26"
+    },
+    "quality": {
+      "misassemblies": 1.0,
+      "local_misassemblies": 0.0,
+      "genome_fraction": 100.0,
+      "duplication_ratio": 1.211,
+      "n50": 72653.0,
+      "ng50": 72653.0,
+      "nga50": 40088.0,
+      "contigs": 1.0,
+      "total_length": 72653.0,
+      "mismatches_per_100kb": 0.0,
+      "indels_per_100kb": 0.0,
+      "unaligned_length": 0.0
+    },
+    "all_gfa_hashes": {
+      "asm.a_ctg.gfa": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "asm.a_ctg.noseq.gfa": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "asm.p_ctg.gfa": "a88e66399c3c06be9eb804fae834d81c0d2351af588596a27441c43565880f70",
+      "asm.p_ctg.noseq.gfa": "4b4ce47267ab178d61fb424bddfee0b674a238bcae05002753b68912ef560410",
+      "asm.p_utg.gfa": "025e8d5fbe9fa62a1823125b8df2fa63f3bad4b36c1e0bf162253aff9e2d6484",
+      "asm.p_utg.noseq.gfa": "fd51626c622fc7437ad355ff3e78619d6b8fd97116c56b738995624da6e7d8c0",
+      "asm.r_utg.gfa": "6bc17910a94c221b1239df09dbd725497aa91404ba6a9d9f2573980e13704669",
+      "asm.r_utg.noseq.gfa": "1a99e920e7f940f04385f120850de17cec1eb0facbf06181e44efc5c66797e09"
+    },
+    "performance": {
+      "median_wall_seconds": 28.046474834089167,
+      "median_cpu_seconds": 4.358313,
+      "median_peak_rss_bytes": 65982464,
+      "quality": {
+        "misassemblies": 1.0,
+        "local_misassemblies": 0.0,
+        "genome_fraction": 100.0,
+        "duplication_ratio": 1.211,
+        "n50": 72653.0,
+        "ng50": 72653.0,
+        "nga50": 40088.0,
+        "contigs": 1.0,
+        "total_length": 72653.0,
+        "mismatches_per_100kb": 0.0,
+        "indels_per_100kb": 0.0,
+        "unaligned_length": 0.0
+      },
+      "seed_index_counts": [
+        47622,
+        51216,
+        51219,
+        51219
+      ]
+    },
+    "build": {
+      "vendor/hifiasm/hifiasm": "f360b2850b6ec1b4291ed56bf7954bc95c89c4af3846f2307719c054f799db8e",
+      "vendor/quast/quast_libs/minimap2/minimap2": "960fbdd253e110208498badf48eac8e09352c5fca8383d4bf878cf088c0375ab"
+    },
+    "input_sha256": {
+      "reference.fa": "6382baee7b3ac1fa8164aec8978afd91f2841c03b847cd282490ee8f48038262",
+      "reads.fa": "bc71495a9ed8617c2b33f7b97f8c0b500a32768f1977883715a91a6c3408c36b"
+    }
+  },
+  "starter_holdout_repeat": {
+    "hashes": {
+      "primary_gfa": "1178bdb5cbcead076d511b56ccfa7bff1fa01c3ccc54655a6ef182263e1e9ec1",
+      "primary_fasta": "f7f556edee593870460b29e7953bafe7863c8203883ca83d152b3d9c69a2c605"
+    },
+    "quality": {
+      "misassemblies": 0.0,
+      "local_misassemblies": 0.0,
+      "genome_fraction": 100.0,
+      "duplication_ratio": 1.0,
+      "n50": 100000.0,
+      "ng50": 100000.0,
+      "nga50": 100000.0,
+      "contigs": 1.0,
+      "total_length": 100000.0,
+      "mismatches_per_100kb": 0.0,
+      "indels_per_100kb": 0.0,
+      "unaligned_length": 0.0
+    },
+    "all_gfa_hashes": {
+      "asm.a_ctg.gfa": "130a1e315ae58d824d2d36c1c30d8f229654d684932c7b850e47fbb3c3c8bedc",
+      "asm.a_ctg.noseq.gfa": "73211ab30cd00bd2112dc321e78f8f26e859fed8f56b10bf5ea8400b4f2b68d9",
+      "asm.p_ctg.gfa": "1178bdb5cbcead076d511b56ccfa7bff1fa01c3ccc54655a6ef182263e1e9ec1",
+      "asm.p_ctg.noseq.gfa": "ff270b764c843b36b19751d1a009705cc9bacd73bf6c26549958282598d68eec",
+      "asm.p_utg.gfa": "3d994c4b31edcc6d84d774391d3894b62b42e7e14c675142e8caa868b81f1d5f",
+      "asm.p_utg.noseq.gfa": "db2f6c5a6f1de30a1bc69eef86b4a7c52e86c0453f0890a792a0569d40a118b2",
+      "asm.r_utg.gfa": "3d994c4b31edcc6d84d774391d3894b62b42e7e14c675142e8caa868b81f1d5f",
+      "asm.r_utg.noseq.gfa": "db2f6c5a6f1de30a1bc69eef86b4a7c52e86c0453f0890a792a0569d40a118b2"
+    },
+    "performance": {
+      "median_wall_seconds": 35.1915008330252,
+      "median_cpu_seconds": 11.110799,
+      "median_peak_rss_bytes": 72847360,
+      "quality": {
+        "misassemblies": 0.0,
+        "local_misassemblies": 0.0,
+        "genome_fraction": 100.0,
+        "duplication_ratio": 1.0,
+        "n50": 100000.0,
+        "ng50": 100000.0,
+        "nga50": 100000.0,
+        "contigs": 1.0,
+        "total_length": 100000.0,
+        "mismatches_per_100kb": 0.0,
+        "indels_per_100kb": 0.0,
+        "unaligned_length": 0.0
+      },
+      "seed_index_counts": [
+        87250,
+        100177,
+        100259,
+        100259
+      ]
+    },
+    "build": {
+      "vendor/hifiasm/hifiasm": "f360b2850b6ec1b4291ed56bf7954bc95c89c4af3846f2307719c054f799db8e",
+      "vendor/quast/quast_libs/minimap2/minimap2": "960fbdd253e110208498badf48eac8e09352c5fca8383d4bf878cf088c0375ab"
+    },
+    "input_sha256": {
+      "reference.fa": "6698022cc7075b3e9934536981c5d89c20673ab67bd0933919c3af467e0936b4",
+      "reads.fa": "83907da9c73279f79bb2206496f0c08f1b1e148ec4290a820e954ef34321c627"
+    }
+  },
+  "starter_holdout_gc_error": {
+    "hashes": {
+      "primary_gfa": "3e8d289062b94ad120ad682e9b9f7c63e2cd57ed6f28fdbb586aa153fb5404fb",
+      "primary_fasta": "9f3e6c3bbd0ebcf0b95a1b0d35ffc6868ff82a9f749967e8996c776c097a2525"
+    },
+    "quality": {
+      "misassemblies": 0.0,
+      "local_misassemblies": 0.0,
+      "genome_fraction": 100.0,
+      "duplication_ratio": 1.0,
+      "n50": 80000.0,
+      "ng50": 80000.0,
+      "nga50": 80000.0,
+      "contigs": 1.0,
+      "total_length": 80000.0,
+      "mismatches_per_100kb": 0.0,
+      "indels_per_100kb": 0.0,
+      "unaligned_length": 0.0
+    },
+    "all_gfa_hashes": {
+      "asm.a_ctg.gfa": "bf6e1d06863e25e43303dddca963dfd1b627615ca09099e0e4adc66c67dda46e",
+      "asm.a_ctg.noseq.gfa": "3a38c8bac3170492e6ed98e25a91c858873ab007862f543bc7954cf7dcbe8064",
+      "asm.p_ctg.gfa": "3e8d289062b94ad120ad682e9b9f7c63e2cd57ed6f28fdbb586aa153fb5404fb",
+      "asm.p_ctg.noseq.gfa": "5c83457f086e129a299612d3fd7e9ff35c7d07ad68e7793436f993ac8cffad47",
+      "asm.p_utg.gfa": "f42d6cd362cab041b64dcbcce3f23f4520363fc5e0127bf629fb3ccf2ebf3b23",
+      "asm.p_utg.noseq.gfa": "e1c60887e9fc4f509b3c883f1aac62ce4d922e4af806d6111d0d28c77040af54",
+      "asm.r_utg.gfa": "f42d6cd362cab041b64dcbcce3f23f4520363fc5e0127bf629fb3ccf2ebf3b23",
+      "asm.r_utg.noseq.gfa": "e1c60887e9fc4f509b3c883f1aac62ce4d922e4af806d6111d0d28c77040af54"
+    },
+    "performance": {
+      "median_wall_seconds": 12.775492124957964,
+      "median_cpu_seconds": 5.422795,
+      "median_peak_rss_bytes": 67608576,
+      "quality": {
+        "misassemblies": 0.0,
+        "local_misassemblies": 0.0,
+        "genome_fraction": 100.0,
+        "duplication_ratio": 1.0,
+        "n50": 80000.0,
+        "ng50": 80000.0,
+        "nga50": 80000.0,
+        "contigs": 1.0,
+        "total_length": 80000.0,
+        "mismatches_per_100kb": 0.0,
+        "indels_per_100kb": 0.0,
+        "unaligned_length": 0.0
+      },
+      "seed_index_counts": [
+        40373,
+        53263,
+        53628,
+        53635
+      ]
+    },
+    "build": {
+      "vendor/hifiasm/hifiasm": "f360b2850b6ec1b4291ed56bf7954bc95c89c4af3846f2307719c054f799db8e",
+      "vendor/quast/quast_libs/minimap2/minimap2": "960fbdd253e110208498badf48eac8e09352c5fca8383d4bf878cf088c0375ab"
+    },
+    "input_sha256": {
+      "reference.fa": "7b66d0308357cb412be529a5376635e594b34c1d0970dcf2c74ba918aa8ca130",
+      "reads.fa": "ff98cdefd35d57143f0b18117c45c1ee400fa28cd1ea324056fd08d59d535095"
+    }
+  }
+}

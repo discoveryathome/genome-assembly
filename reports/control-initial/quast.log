@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/vendor/quast/quast.py", line 16, in <module>
+    from quast_libs import qconfig
+  File "/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/vendor/quast/quast_libs/qconfig.py", line 13, in <module>
+    from distutils.version import LooseVersion
+ModuleNotFoundError: No module named 'distutils'

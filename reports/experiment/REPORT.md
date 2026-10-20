@@ -1,0 +1,30 @@
+# Controlled minimizer-window experiment
+
+LOCAL-ONLY, author checked. Window 51 → 101, same binary and inputs. See environment.json and commands for build/runtime provenance.
+
+| Dataset | Split | A seconds | B seconds | Wall speedup | CPU speedup | RSS A/B MiB | Quality | Exact primary GFA/FASTA | Screening gate |
+|---|---|---:|---:|---:|---:|---:|---|---|---|
+| starter_dev_balanced | development | 28.046 | 18.558 | 1.381× | 1.110× | 62.9/58.6 | True | True | False |
+| starter_holdout_repeat | held-out | 35.192 | 31.104 | 1.131× | 1.072× | 69.5/63.2 | True | True | False |
+| starter_holdout_gc_error | held-out | 12.775 | 12.161 | 1.069× | 1.064× | 64.5/55.8 | True | True | False |
+
+## Quality (first A/B pair; every repetition is checked)
+
+| Dataset/arm | Extensive/local errors | Genome % | Duplication | N50 | NG50 | NGA50 | Contigs | Mismatch/indel per 100kb |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| starter_dev_balanced/A | 1/0 | 100.000 | 1.211 | 72653 | 72653 | 40088 | 1 | 0.0/0.0 |
+| starter_dev_balanced/B | 1/0 | 100.000 | 1.211 | 72653 | 72653 | 40088 | 1 | 0.0/0.0 |
+| starter_holdout_repeat/A | 0/0 | 100.000 | 1.000 | 100000 | 100000 | 100000 | 1 | 0.0/0.0 |
+| starter_holdout_repeat/B | 0/0 | 100.000 | 1.000 | 100000 | 100000 | 100000 | 1 | 0.0/0.0 |
+| starter_holdout_gc_error/A | 0/0 | 100.000 | 1.000 | 80000 | 80000 | 80000 | 1 | 0.0/0.0 |
+| starter_holdout_gc_error/B | 0/0 | 100.000 | 1.000 | 80000 | 80000 | 80000 | 1 | 0.0/0.0 |
+
+## Interpretation limits
+
+A/A output equality is required. Acceptance additionally requires all quality gates, ≥10% median speedup, gain exceeding twice the maximum A/A deviation, bootstrap lower bound >1, and median peak RSS ratio ≤1.05. Five pairs give only coarse uncertainty estimates; this is a pilot, not a significance claim.
+
+Timing is whole-process assembly time, including input and output; QUAST is outside the timed region. RSS is the OS per-process high-water mark including Rosetta where applicable. File caches are warm; assembly intermediate caches are never reused. One warmup per arm is excluded. No concurrent builds or pilot benchmarks run. External machine activity is recorded as load averages but not controlled. CPU ratios are additional diagnostics, not substitutes for an idle-machine replay. See reports/trial/HOST-CAVEAT.md for the initialization host: substantial competing activity was observed. Screening acceptance does not constitute a confirmed performance claim.
+
+The candidate changes seed selection and is a quality-risking parameter optimization. Byte equality on a finite set does not prove universal equivalence. All GFA equality is tracked separately from primary FASTA/GFA equality; binary intermediate identity is not claimed. No real biological, diploid or human generalization is established.
+
+Completeness means reference base coverage here, not gene/BUSCO completeness. Synthetic reads include simplistic substitutions and indels. Held-out sets were frozen before candidate evaluation; after this report they are regression datasets, requiring new holdouts for subsequent tuning.

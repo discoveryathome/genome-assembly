@@ -1,0 +1,3 @@
+##gff-version 3
+wrong	QUAST	possible_assembly_error	59999	60000	.	.	.	Name=Extensive misassembly;type=inversion
+wrong	QUAST	possible_assembly_error	119999	120000	.	.	.	Name=Extensive misassembly;type=inversion

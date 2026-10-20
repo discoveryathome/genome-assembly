@@ -1,0 +1,52 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [synthetic_circle]
+	Total Regions: 1
+	Total Region Length: 80000
+Analyzing contigs...
+CONTIG: ptg000001c (80000bp)
+Best alignment score: 59494.0 (LEN: 59494, IDY: 100.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 80000.0, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled.
+			Real Alignment 1: 1 20506 | 20506 1 | 20506 20506 | 100.0 | synthetic_circle ptg000001c
+			  Not a misassembly [linear representation of circular genome] between these two alignments
+			Real Alignment 2: 20507 80000 | 80000 20507 | 59494 59494 | 100.0 | synthetic_circle ptg000001c
+
+Analyzing coverage...
+Writing SNPs into /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_gc_error-ab-4-B/quast/contigs_reports/minimap_output/assembly.used_snps
+
+Analysis is finished!
+Founded SNPs were written into /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_gc_error-ab-4-B/quast/contigs_reports/minimap_output/assembly.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap ("Extra" Aligned Bases): 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Bases in Fully and Partially Unaligned Contigs: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+"Extra" Aligned Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used (there is no "extra" aligned bases).
+
+	Covered Bases in Reference: 80000
+	Raw Aligned Bases in Assembly: 80000
+	Total Aligned Bases in Assembly (with "Extras"): 80000
+
+	SNPs: 0
+	Insertions: 0
+	Deletions: 0
+

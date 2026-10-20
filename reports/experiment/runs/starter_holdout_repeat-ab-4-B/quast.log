@@ -1,0 +1,76 @@
+/Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/vendor/quast/quast.py /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/assembly.fa -r /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/data/starter_holdout_repeat/reference.fa -o /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/quast -t 1 -m 500 --no-plots --no-html --no-icarus --no-sv --no-read-stats --strict-NA
+
+Version: 5.3.0
+
+System information:
+  OS: macOS-26.6.2-arm64-arm-64bit (macosx)
+  Python version: 3.9.6
+  CPUs number: 8
+
+Started: 2026-10-20 16:40:55
+
+Logging to /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/quast/quast.log
+
+CWD: /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly
+Main parameters: 
+  MODE: default, threads: 1, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Reference:
+  /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/data/starter_holdout_repeat/reference.fa ==> reference
+
+Contigs:
+  Pre-processing...
+  /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/assembly.fa ==> assembly
+
+2026-10-20 16:40:56
+Running Basic statistics processor...
+  Reference genome:
+    reference.fa, length = 100000, num fragments = 1, GC % = 50.14
+  Contig files: 
+    assembly
+  Calculating N50 and L50...
+    assembly, N50 = 100000, L50 = 1, auN = 100000.0, Total length = 100000, GC % = 50.14, # N's per 100 kbp =  0.00
+Done.
+
+2026-10-20 16:40:56
+Running Contig analyzer...
+  assembly
+  Logging to files /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/quast/contigs_reports/contigs_report_assembly.stdout and contigs_report_assembly.stderr...
+  Aligning contigs to the reference
+  Analysis is finished.
+  Creating total report...
+    saved to /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/quast/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/quast/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/quast/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+Done.
+
+2026-10-20 16:40:56
+Running NA-NGA calculation...
+  assembly, Largest alignment = 100000, NA50 = 100000, NGA50 = 100000, LA50 = 1, LGA50 = 1
+Done.
+
+2026-10-20 16:40:56
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  assembly
+  Analysis is finished.
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-10-20 16:40:56
+RESULTS:
+  Text versions of total report are saved to /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  Log is saved to /Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly/reports/experiment/runs/starter_holdout_repeat-ab-4-B/quast/quast.log
+
+Finished: 2026-10-20 16:40:56
+Elapsed time: 0:00:00.615523
+NOTICEs: 3; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

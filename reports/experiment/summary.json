@@ -1,0 +1,386 @@
+[
+  {
+    "dataset": "starter_dev_balanced",
+    "split": "development",
+    "aa_pairs": [
+      {
+        "speedup": 1.201230615475398,
+        "cpu_speedup": 0.9911129245419508,
+        "rss_ratio": 1.0121268082486918,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.1925244724340338,
+        "cpu_speedup": 0.983373112546956,
+        "rss_ratio": 0.9926931106471816,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      }
+    ],
+    "ab_pairs": [
+      {
+        "speedup": 0.992663232026854,
+        "cpu_speedup": 1.109476714881398,
+        "rss_ratio": 1.1297391771981715,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.1854101676086946,
+        "cpu_speedup": 1.098689016605079,
+        "rss_ratio": 0.8815712101611196,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.528655842159311,
+        "cpu_speedup": 1.1095762336619959,
+        "rss_ratio": 0.788558968768037,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.407200241678539,
+        "cpu_speedup": 1.1253559708731973,
+        "rss_ratio": 0.8279222794711031,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.3806276984933383,
+        "cpu_speedup": 1.1230163904431318,
+        "rss_ratio": 1.0067487568079565,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      }
+    ],
+    "median_speedup": 1.3806276984933383,
+    "paired_bootstrap_95pct": [
+      0.992663232026854,
+      1.528655842159311
+    ],
+    "median_cpu_speedup": 1.1095762336619959,
+    "max_aa_relative_deviation": 0.201230615475398,
+    "aa_stable": true,
+    "quality_pass": true,
+    "memory_pass": true,
+    "performance_pass": false,
+    "candidate_accepted": false,
+    "exact_primary_all_pairs": true,
+    "exact_all_gfa_all_pairs": true,
+    "A": {
+      "median_wall_seconds": 28.046474834089167,
+      "median_cpu_seconds": 4.358313,
+      "median_peak_rss_bytes": 65982464,
+      "quality": {
+        "misassemblies": 1.0,
+        "local_misassemblies": 0.0,
+        "genome_fraction": 100.0,
+        "duplication_ratio": 1.211,
+        "n50": 72653.0,
+        "ng50": 72653.0,
+        "nga50": 40088.0,
+        "contigs": 1.0,
+        "total_length": 72653.0,
+        "mismatches_per_100kb": 0.0,
+        "indels_per_100kb": 0.0,
+        "unaligned_length": 0.0
+      },
+      "seed_index_counts": [
+        47622,
+        51216,
+        51219,
+        51219
+      ]
+    },
+    "B": {
+      "median_wall_seconds": 18.558317166985944,
+      "median_cpu_seconds": 3.92826,
+      "median_peak_rss_bytes": 61407232,
+      "quality": {
+        "misassemblies": 1.0,
+        "local_misassemblies": 0.0,
+        "genome_fraction": 100.0,
+        "duplication_ratio": 1.211,
+        "n50": 72653.0,
+        "ng50": 72653.0,
+        "nga50": 40088.0,
+        "contigs": 1.0,
+        "total_length": 72653.0,
+        "mismatches_per_100kb": 0.0,
+        "indels_per_100kb": 0.0,
+        "unaligned_length": 0.0
+      },
+      "seed_index_counts": [
+        24279,
+        26219,
+        26221,
+        26221
+      ]
+    }
+  },
+  {
+    "dataset": "starter_holdout_repeat",
+    "split": "held-out",
+    "aa_pairs": [
+      {
+        "speedup": 1.1601666581028578,
+        "cpu_speedup": 1.013737600106885,
+        "rss_ratio": 1.1096296296296295,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.0007929159058726,
+        "cpu_speedup": 1.0483113733035936,
+        "rss_ratio": 1.2844003388599783,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      }
+    ],
+    "ab_pairs": [
+      {
+        "speedup": 1.1313982547377708,
+        "cpu_speedup": 1.0646345337022483,
+        "rss_ratio": 0.7995472430334717,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.1550571511148902,
+        "cpu_speedup": 1.0858274603264968,
+        "rss_ratio": 0.8381220129322463,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.0403298126243494,
+        "cpu_speedup": 1.0724711607624462,
+        "rss_ratio": 0.9635434807848601,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 0.9531730381092289,
+        "cpu_speedup": 1.0778160249384983,
+        "rss_ratio": 0.8975440075893327,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.3934466678504644,
+        "cpu_speedup": 1.0643199604266207,
+        "rss_ratio": 1.000556551852081,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      }
+    ],
+    "median_speedup": 1.1313982547377708,
+    "paired_bootstrap_95pct": [
+      0.9531730381092289,
+      1.3934466678504644
+    ],
+    "median_cpu_speedup": 1.0724711607624462,
+    "max_aa_relative_deviation": 0.1601666581028578,
+    "aa_stable": true,
+    "quality_pass": true,
+    "memory_pass": true,
+    "performance_pass": false,
+    "candidate_accepted": false,
+    "exact_primary_all_pairs": true,
+    "exact_all_gfa_all_pairs": true,
+    "A": {
+      "median_wall_seconds": 35.1915008330252,
+      "median_cpu_seconds": 11.110799,
+      "median_peak_rss_bytes": 72847360,
+      "quality": {
+        "misassemblies": 0.0,
+        "local_misassemblies": 0.0,
+        "genome_fraction": 100.0,
+        "duplication_ratio": 1.0,
+        "n50": 100000.0,
+        "ng50": 100000.0,
+        "nga50": 100000.0,
+        "contigs": 1.0,
+        "total_length": 100000.0,
+        "mismatches_per_100kb": 0.0,
+        "indels_per_100kb": 0.0,
+        "unaligned_length": 0.0
+      },
+      "seed_index_counts": [
+        87250,
+        100177,
+        100259,
+        100259
+      ]
+    },
+    "B": {
+      "median_wall_seconds": 31.10443266609218,
+      "median_cpu_seconds": 10.319994,
+      "median_peak_rss_bytes": 66273280,
+      "quality": {
+        "misassemblies": 0.0,
+        "local_misassemblies": 0.0,
+        "genome_fraction": 100.0,
+        "duplication_ratio": 1.0,
+        "n50": 100000.0,
+        "ng50": 100000.0,
+        "nga50": 100000.0,
+        "contigs": 1.0,
+        "total_length": 100000.0,
+        "mismatches_per_100kb": 0.0,
+        "indels_per_100kb": 0.0,
+        "unaligned_length": 0.0
+      },
+      "seed_index_counts": [
+        44560,
+        51185,
+        51227,
+        51227
+      ]
+    }
+  },
+  {
+    "dataset": "starter_holdout_gc_error",
+    "split": "held-out",
+    "aa_pairs": [
+      {
+        "speedup": 0.4607917856218939,
+        "cpu_speedup": 0.9706155172909525,
+        "rss_ratio": 0.9697739088381091,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 0.774245033990017,
+        "cpu_speedup": 0.939941015305213,
+        "rss_ratio": 0.8009455691598981,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      }
+    ],
+    "ab_pairs": [
+      {
+        "speedup": 1.3452683721376595,
+        "cpu_speedup": 1.0637566205777118,
+        "rss_ratio": 0.7592828994838209,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 0.862004407065451,
+        "cpu_speedup": 1.064348472619659,
+        "rss_ratio": 0.8942855354572198,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.069355789483337,
+        "cpu_speedup": 1.0383276682372693,
+        "rss_ratio": 0.8517508784684357,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 1.297865550890982,
+        "cpu_speedup": 1.061488922168094,
+        "rss_ratio": 0.9416012558869702,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      },
+      {
+        "speedup": 0.8300222692553484,
+        "cpu_speedup": 1.085025494151514,
+        "rss_ratio": 0.9088885269044904,
+        "exact_primary": true,
+        "exact_all_gfa": true,
+        "quality_failures": []
+      }
+    ],
+    "median_speedup": 1.069355789483337,
+    "paired_bootstrap_95pct": [
+      0.8300222692553484,
+      1.3452683721376595
+    ],
+    "median_cpu_speedup": 1.0637566205777118,
+    "max_aa_relative_deviation": 0.5392082143781061,
+    "aa_stable": true,
+    "quality_pass": true,
+    "memory_pass": true,
+    "performance_pass": false,
+    "candidate_accepted": false,
+    "exact_primary_all_pairs": true,
+    "exact_all_gfa_all_pairs": true,
+    "A": {
+      "median_wall_seconds": 12.775492124957964,
+      "median_cpu_seconds": 5.422795,
+      "median_peak_rss_bytes": 67608576,
+      "quality": {
+        "misassemblies": 0.0,
+        "local_misassemblies": 0.0,
+        "genome_fraction": 100.0,
+        "duplication_ratio": 1.0,
+        "n50": 80000.0,
+        "ng50": 80000.0,
+        "nga50": 80000.0,
+        "contigs": 1.0,
+        "total_length": 80000.0,
+        "mismatches_per_100kb": 0.0,
+        "indels_per_100kb": 0.0,
+        "unaligned_length": 0.0
+      },
+      "seed_index_counts": [
+        40373,
+        53263,
+        53628,
+        53635
+      ]
+    },
+    "B": {
+      "median_wall_seconds": 12.16073075006716,
+      "median_cpu_seconds": 5.110874999999999,
+      "median_peak_rss_bytes": 58523648,
+      "quality": {
+        "misassemblies": 0.0,
+        "local_misassemblies": 0.0,
+        "genome_fraction": 100.0,
+        "duplication_ratio": 1.0,
+        "n50": 80000.0,
+        "ng50": 80000.0,
+        "nga50": 80000.0,
+        "contigs": 1.0,
+        "total_length": 80000.0,
+        "mismatches_per_100kb": 0.0,
+        "indels_per_100kb": 0.0,
+        "unaligned_length": 0.0
+      },
+      "seed_index_counts": [
+        20830,
+        27451,
+        27669,
+        27677
+      ]
+    }
+  }
+]

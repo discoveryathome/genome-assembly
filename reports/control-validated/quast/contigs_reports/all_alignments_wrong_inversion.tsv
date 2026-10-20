@@ -1,0 +1,7 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+1	59999	1	59999	synthetic_circle	wrong	100.0		True
+inversion
+60002	120001	119999	60000	synthetic_circle	wrong	100.0		True
+inversion
+120000	250000	120000	250000	synthetic_circle	wrong	100.0		True
+CONTIG	wrong	250000	misassembled
