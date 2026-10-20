@@ -39,4 +39,4 @@ The workspace owner explicitly agreed to maintain this local pilot and selected 
 
 Credit is recorded in CONTRIBUTORS.md and result packages, including contributions that find reproducible negative results. Dependency authors retain their attribution and licenses. Algorithm novelty requires a literature audit. Review capacity, not donated compute alone, will determine sustainable throughput.
 
-Every result package contains README.md, TASK.json, SOURCES.json and VERIFY.json, with exact commands, hashes, environment, limitations and next questions. Local findings/handoffs end with a fenced discover JSON block; no messages are posted externally in LOCAL mode.
+Every result package contains README.md, TASK.json, SOURCES.json and VERIFY.json, with exact commands, hashes, environment, limitations and next questions. Local findings/handoffs end with a fenced discover JSON block; the initial private GitHub push is owner-authorized. Hub submission remains unauthorized; no hub PR or consent record should be created.

@@ -1,4 +1,4 @@
-# Genome assembly efficiency — Discovery@Home LOCAL pilot
+# Genome assembly efficiency — Discovery@Home incubated pilot
 
 Can a wider Hifiasm minimizer window reduce overlap-seeding work without losing accuracy or completeness? This pilot compares window 51 against 101 with the same pinned executable on three small synthetic read datasets. It measures structural errors, reference completeness, contiguity, base errors, runtime and peak memory. No human genomic data is used.
 
@@ -30,7 +30,7 @@ python3 tools/discover.pyz validate .
 
 The verifier includes reference-as-assembly and inversion controls, fail-closed quality parsing, A/A controls, balanced interleaving and deterministic input regeneration. Exact primary output and all-GFA equality are recorded separately from quality equality. Window tuning can change sensitivity; passing a finite benchmark does not prove algorithmic equivalence.
 
-Read [AGENTS.md](AGENTS.md) and [DISCOVERY.md](DISCOVERY.md) for bounded 30–60 minute contribution tasks. The workspace owner agreed to maintain the local pilot; review capacity remains undeclared. No repository, hub listing or external post is created. Original code is MIT; dependencies retain their own licenses.
+Read [AGENTS.md](AGENTS.md) and [DISCOVERY.md](DISCOVERY.md) for bounded 30–60 minute contribution tasks. The workspace owner agreed to maintain the local pilot; review capacity remains undeclared. The pilot repository is private at [discoveryathome/genome-assembly](https://github.com/discoveryathome/genome-assembly). No hub submission or listing is authorized. Original code is MIT; dependencies retain their own licenses.
 
 ## Trial and next contribution
 
@@ -40,6 +40,6 @@ For the larger, not yet fully measured tier, pass `--config configs/experiment.j
 
 The offline verifier checks artifact integrity, regenerated inputs, recorded quality and computed decisions. It cannot independently authenticate elapsed time or prove an arbitrary-input exactness claim. Full replay rebuilds and measures the assembler; allow additional time for source compilation and host load.
 
-`discover validate .` checks structure, not scientific acceptance. The missing external coordination-channel convention is intentional in LOCAL mode; the session record and result package contain the local claim and handoffs.
+`discover validate .` checks structure, not scientific acceptance. The missing external coordination-channel convention is intentional during incubation; the session record and result package contain the local claim and handoffs.
 
 The `--baseline` replay option additionally requires the unchanged arm to reproduce the archived quality and primary/all-GFA hashes. A mismatch on another platform must be investigated and reported, not silently rebased. The larger tier has different datasets and must establish its own baseline.

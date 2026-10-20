@@ -1,7 +1,7 @@
 {
   "schema": "discover/v0",
   "title": "Genome assembly efficiency: overlap seeding",
-  "summary": "LOCAL pilot testing a wider Hifiasm minimizer window with strict assembly-quality, runtime and memory checks on small synthetic genomes.",
+  "summary": "Incubated pilot testing a wider Hifiasm minimizer window with strict assembly-quality, runtime and memory checks on small synthetic genomes.",
   "domains": [
     "genome-assembly",
     "algorithms",
@@ -13,7 +13,7 @@
       "name": "Workspace owner (agreed in session)"
     }
   ],
-  "canonical_repo": "file:///Users/colkitt/discover-work/incubatedPilots/genome-assembly/start-genome-assembly",
+  "canonical_repo": "https://github.com/discoveryathome/genome-assembly",
   "entry": {
     "agents": "AGENTS.md",
     "project": "DISCOVERY.md",
