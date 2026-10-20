@@ -12,9 +12,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def verify(out, regenerate=True):
-    config = json.loads((ROOT/'configs/experiment.json').read_text())
     environment = json.loads((out/'environment.json').read_text())
-    assert environment['config_sha256'] == sha(ROOT/'configs/experiment.json'), 'Experiment definition changed'
+    config_path = (ROOT/environment['config_path']).resolve()
+    assert config_path.is_relative_to(ROOT), 'Configuration escaped pilot'
+    config = json.loads(config_path.read_text())
+    assert environment['config_sha256'] == sha(config_path), 'Experiment definition changed'
     assert environment['configuration'] == config, 'Partial or altered experiment'
     locks = json.loads((ROOT/'configs/tools.lock.json').read_text())
     assert environment['build']['pins'] == locks, 'Dependency pin mismatch'

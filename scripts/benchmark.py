@@ -189,10 +189,13 @@ def report(out, summaries):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--out', default='reports/experiment')
+    p.add_argument('--config', default='configs/experiment.json')
     p.add_argument('--control-only', action='store_true')
     p.add_argument('--datasets', nargs='+', help='Subset; exploratory only unless all frozen datasets run')
     args = p.parse_args()
-    config = json.loads(Path('configs/experiment.json').read_text())
+    config_path = Path(args.config).resolve()
+    if not config_path.is_relative_to(ROOT): raise ValueError('Configuration must be inside the pilot')
+    config = json.loads(config_path.read_text())
     out = Path(args.out).resolve()
     if not out.is_relative_to(ROOT): raise ValueError('Output must remain inside the pilot')
     if args.control_only:
@@ -202,7 +205,8 @@ def main():
     if args.datasets: config['datasets'] = [d for d in config['datasets'] if d['id'] in args.datasets]
     environment = {'time_utc': datetime.now(timezone.utc).isoformat(), 'platform': platform.platform(),
                    'python': sys.version, 'load_start': os.getloadavg(),
-                   'config_sha256': sha(ROOT/'configs/experiment.json'),
+                   'config_path': str(config_path.relative_to(ROOT)),
+                   'config_sha256': sha(config_path),
                    'generator_sha256': sha(ROOT/'scripts/generate.py'),
                    'harness_sha256': sha(ROOT/'scripts/benchmark.py'),
                    'quality_sha256': sha(ROOT/'scripts/quality.py'),
