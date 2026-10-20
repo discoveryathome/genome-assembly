@@ -1,0 +1,13 @@
+{
+  "schema": "discover-frontier/v0",
+  "statement": "Hifiasm's published phased assembly graph approach and double-graph extension establish accurate long-read assembly capabilities under the papers' conditions; no local speedup or quality-preservation result has yet been measured for the proposed window-51 versus window-101 benchmark.",
+  "status": "Research brief and harness prepared; scope confirmation pending before build and measurement.",
+  "evidence_level": ["author-checked"],
+  "claim_kind": ["argument"],
+  "scope": "Literature-backed starting point only. LOCAL synthetic haploid 250–400 kbp pilot; no global optimum, biological or human-generalization claim.",
+  "assumptions": [{"id": "local-measurement", "statement": "The local verifier and candidate must be run before reporting speed, quality or memory outcomes.", "status": "open"}],
+  "sources": ["https://doi.org/10.1038/s41592-020-01056-5", "https://doi.org/10.1038/s41592-024-02269-8", "https://doi.org/10.1093/bioinformatics/btt086", "research/BRIEF.md"],
+  "review": "discover/review.md",
+  "updated_on": "2026-10-20",
+  "pinned_heads": {"hifiasm": "ec9a8b222d149d25b7355e83765698640d59b189", "quast": "38373fb6454604197d45b047ae61f82e68b61a74"}
+}

@@ -1,0 +1,153 @@
+{
+  "schema": "discover-catalog/v0",
+  "priority_revision": 1,
+  "assessed_on": "2026-10-20",
+  "priority_log": "discover/priority-log.md",
+  "status": "Provisional cards; initialization measurement pending scope confirmation",
+  "tracks": [
+    {
+      "id": "reproduce",
+      "weight": 35,
+      "useful_outcome": "Identical input hashes and quality; report timing/RSS differences and machine provenance.",
+      "tasks": [
+        {
+          "id": "reproduce-01",
+          "question": "Can an independent replay reproduce the controlled quality and performance results?",
+          "starting_points": [
+            "research/BRIEF.md",
+            "configs/experiment.json",
+            "DISCOVERY.md"
+          ],
+          "methods": [
+            "Replay the recorded evidence and then the full benchmark on an idle machine."
+          ],
+          "acceptance_gate": "Identical input hashes and quality; report timing/RSS differences and machine provenance.",
+          "first_step": {
+            "command": [
+              "python3",
+              "scripts/first_step.py",
+              "reproduce"
+            ],
+            "expected": "Print the scoped configuration/brief or pass the associated verifier checks. Reproduce first_step requires the initialization experiment to exist."
+          },
+          "bottleneck_link": "DISCOVERY.md#experimental-contract",
+          "claim_kind": [
+            "measured"
+          ],
+          "scope_change_triggers": [
+            "Need >2 GiB work space or a human genome dataset",
+            "Changing the frozen candidate after viewing heldouts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verifier",
+      "weight": 30,
+      "useful_outcome": "Reject the bad candidate and preserve all positive controls; no weakened thresholds.",
+      "tasks": [
+        {
+          "id": "verifier-01",
+          "question": "Can a structurally wrong or incomplete assembly evade the quality gate?",
+          "starting_points": [
+            "research/BRIEF.md",
+            "configs/experiment.json",
+            "DISCOVERY.md"
+          ],
+          "methods": [
+            "Run known-good and deceptive-bad controls; add one adversarial check."
+          ],
+          "acceptance_gate": "Reject the bad candidate and preserve all positive controls; no weakened thresholds.",
+          "first_step": {
+            "command": [
+              "python3",
+              "scripts/first_step.py",
+              "verifier"
+            ],
+            "expected": "Print the scoped configuration/brief or pass the associated verifier checks. Reproduce first_step requires the initialization experiment to exist."
+          },
+          "bottleneck_link": "DISCOVERY.md#experimental-contract",
+          "claim_kind": [
+            "measured"
+          ],
+          "scope_change_triggers": [
+            "Need >2 GiB work space or a human genome dataset",
+            "Changing the frozen candidate after viewing heldouts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "overlap-seeding",
+      "weight": 25,
+      "useful_outcome": "A bounded measured bottleneck, exactness contract, and reproducible candidate or negative result.",
+      "tasks": [
+        {
+          "id": "overlap-seeding-01",
+          "question": "Which seed-index or chaining operation limits this small workload?",
+          "starting_points": [
+            "research/BRIEF.md",
+            "configs/experiment.json",
+            "DISCOVERY.md"
+          ],
+          "methods": [
+            "Inspect pinned ha_pt_gen/anchor paths and phase markers; profile one development input."
+          ],
+          "acceptance_gate": "A bounded measured bottleneck, exactness contract, and reproducible candidate or negative result.",
+          "first_step": {
+            "command": [
+              "python3",
+              "scripts/first_step.py",
+              "overlap-seeding"
+            ],
+            "expected": "Print the scoped configuration/brief or pass the associated verifier checks. Reproduce first_step requires the initialization experiment to exist."
+          },
+          "bottleneck_link": "DISCOVERY.md#experimental-contract",
+          "claim_kind": [
+            "measured"
+          ],
+          "scope_change_triggers": [
+            "Need >2 GiB work space or a human genome dataset",
+            "Changing the frozen candidate after viewing heldouts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "literature",
+      "weight": 10,
+      "useful_outcome": "Precise source-backed correction or confirmation with conditions; no unsupported global ranking.",
+      "tasks": [
+        {
+          "id": "literature-01",
+          "question": "Does newer primary-source evidence change the minimizer or evaluation assumptions?",
+          "starting_points": [
+            "research/BRIEF.md",
+            "configs/experiment.json",
+            "DISCOVERY.md"
+          ],
+          "methods": [
+            "Audit one primary paper/source against the brief and pinned implementation."
+          ],
+          "acceptance_gate": "Precise source-backed correction or confirmation with conditions; no unsupported global ranking.",
+          "first_step": {
+            "command": [
+              "python3",
+              "scripts/first_step.py",
+              "literature"
+            ],
+            "expected": "Print the scoped configuration/brief or pass the associated verifier checks. Reproduce first_step requires the initialization experiment to exist."
+          },
+          "bottleneck_link": "DISCOVERY.md#experimental-contract",
+          "claim_kind": [
+            "argument"
+          ],
+          "scope_change_triggers": [
+            "Need >2 GiB work space or a human genome dataset",
+            "Changing the frozen candidate after viewing heldouts"
+          ]
+        }
+      ]
+    }
+  ]
+}

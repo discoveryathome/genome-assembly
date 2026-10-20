@@ -1,0 +1,9 @@
+/vendor/
+/data/
+/tools/*.pyz
+__pycache__/
+*.pyc
+/reports/setup/
+/reports/replay*/
+/scratch/
+.DS_Store

@@ -1,0 +1,96 @@
+Screen of vendor/quast: 48 finding(s), 0 high.
+- [warn] binary external_tools/KMC/linux_64/kmc: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary external_tools/KMC/linux_64/kmc_tools: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary external_tools/KMC/macosx/kmc: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary external_tools/KMC/macosx/kmc_tools: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary external_tools/blast/linux_64/blastn: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary external_tools/blast/linux_64/makeblastdb: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary external_tools/blast/linux_64/tblastn: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary external_tools/blast/macosx/blastn: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary external_tools/blast/macosx/makeblastdb: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary external_tools/red/linux_64/Red: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary external_tools/red/macosx/Red: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/barrnap/binaries/darwin/nhmmer: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/barrnap/binaries/linux/nhmmer: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/busco/hmmsearch: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark-es/linux_64/Gibbs3: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark-es/linux_64/gmhmme3: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark-es/linux_64/probuild: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark-es/macosx/Gibbs3: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark-es/macosx/gmhmme3: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark-es/macosx/probuild: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark/linux_64/Gibbs3: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark/linux_64/gc: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark/linux_64/gibbs: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark/linux_64/gm: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark/linux_64/gmhmmp: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark/linux_64/matinfo: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark/linux_64/mkmat: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark/linux_64/probuild: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark/linux_64/viewmat: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/genemark/macosx/Gibbs3: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark/macosx/gc: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark/macosx/gibbs: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark/macosx/gm: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark/macosx/gmhmmp: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark/macosx/matinfo: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark/macosx/mkmat: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark/macosx/probuild: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/genemark/macosx/viewmat: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/sambamba/sambamba_linux: a committed executable: never run it; build from source instead
+    ELF executable
+- [warn] binary quast_libs/sambamba/sambamba_osx: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] binary quast_libs/site_packages/simplejson/_speedups.so: a committed executable: never run it; build from source instead
+    Mach-O executable
+- [warn] install-hook setup.py: setup.py runs custom code on pip install: read it before installing
+- [warn] privileged tc_tests/common.py:78: needs root, or deletes outside the repo
+    os.system('chmod -R 777 ' + data_dirpath)
+- [warn] privileged tc_tests/common.py:82: needs root, or deletes outside the repo
+    os.system("chmod -R 777 " + common_results_dirpath)
+- [warn] privileged tc_tests/common.py:303: needs root, or deletes outside the repo
+    os.system("chmod -R 777 " + results_dirpath)
+- [info] privileged README.md:56: needs root, or deletes outside the repo (in documentation: an agent following it would run it)
+    sudo apt-get update && sudo apt-get install -y pkg-config libfreetype6-dev libpng-dev python3-matplotlib
+- [info] privileged manual.html:173: needs root, or deletes outside the repo (in documentation: an agent following it would run it)
+    sudo apt-get install zlib1g-dev
+- [info] hidden-text quast_libs/html_saver/static/jquery-1.8.2.min.js:2: zero-width characters (common in generated HTML; in a file agents read first, look closer)
+    (function(a,b){function G(a){var b=F[a]={};return p.each(a.split(s),function(a,c){b[c]=!0}),b}function J(a,c,d){if(d===b&&a.nodeType===1){var e="data-"+c.replac
