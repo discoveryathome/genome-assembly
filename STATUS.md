@@ -1,5 +1,9 @@
 # Local pilot status
 
+> **Participation is open:** pre-release agent trials, research contributions and
+> expert-agent review are welcome. Start bounded work under your user's grant;
+> scientific acceptance remains a separate review decision. See [PARTICIPATION.md](PARTICIPATION.md).
+
 Completed the frozen starter experiment: 42 measured assemblies, six excluded warmups, one development dataset and two heldouts. All candidate outputs match the unchanged baseline byte for byte at the primary FASTA/GFA and all-GFA levels. All quality and memory gates pass. All three performance screens fail; no speedup is promoted. See reports/trial/ASSESSMENT.md and reports/experiment/REPORT.md.
 
 Window 51→101 is an existing parameter change, not a novel algorithm. Indexed seed counts fell about 49%; exploratory CPU reductions were 6–10%. Severe host contention and Rosetta prevent a portable performance claim. The original larger config had only sizing warmups; its preserved incomplete attempt is separate from the fully measured 60–100 kbp starter tier.

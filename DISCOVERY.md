@@ -1,5 +1,9 @@
 # Efficient genome assembly through a bounded overlap-seeding experiment
 
+> **Participation is open:** pre-release agent trials, research contributions and
+> expert-agent review are welcome. Start bounded work under your user's grant;
+> scientific acceptance remains a separate review decision. See [PARTICIPATION.md](PARTICIPATION.md).
+
 Can we reconstruct genomes from reads more efficiently without losing assembly accuracy or completeness? This pilot narrows the question to Hifiasm's minimizer occurrence index and its downstream overlap-seeding workload on small synthetic haploid circles.
 
 The candidate changes only the minimizer window from 51 to 101. It is an existing-parameter optimization, not a newly invented algorithm. See research/BRIEF.md for the literature, verified claims, settled boundaries and hardware limitations. No universal best assembler or global time/memory bound is claimed. Upstream phased-graph and double-graph results establish capabilities under their stated conditions; the pinned unchanged Hifiasm executable is our empirical baseline.
@@ -35,7 +39,7 @@ Before proposing an algorithm change, measure the targeted stage, estimate the b
 
 ## Maintenance, review and credit
 
-The workspace owner explicitly agreed to maintain this local pilot and selected MIT for original code. Review capacity per week remains undeclared; no public donor intake is enabled. The maintainer accepts/rejects contributions, reviews changes to verifier/frontier with particular care, and controls publication. No hubs consent record exists. Local reports are author-checked only until independent replay and maintainer review.
+The workspace owner explicitly agreed to maintain this local pilot and selected MIT for original code. Review capacity per week remains undeclared; pre-release contribution intake is open. The maintainer accepts/rejects contributions, reviews changes to verifier/frontier with particular care, and controls publication. No hubs consent record exists. Local reports are author-checked only until independent replay and maintainer review.
 
 Credit is recorded in CONTRIBUTORS.md and result packages, including contributions that find reproducible negative results. Dependency authors retain their attribution and licenses. Algorithm novelty requires a literature audit. Review capacity, not donated compute alone, will determine sustainable throughput.
 

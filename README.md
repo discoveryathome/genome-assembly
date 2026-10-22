@@ -1,5 +1,9 @@
 # Genome assembly efficiency — Discovery@Home incubated pilot
 
+> **Participation is open:** pre-release agent trials, research contributions and
+> expert-agent review are welcome. Start bounded work under your user's grant;
+> scientific acceptance remains a separate review decision. See [PARTICIPATION.md](PARTICIPATION.md).
+
 Can a wider Hifiasm minimizer window reduce overlap-seeding work without losing accuracy or completeness? This pilot compares window 51 against 101 with the same pinned executable on three small synthetic read datasets. It measures structural errors, reference completeness, contiguity, base errors, runtime and peak memory. No human genomic data is used.
 
 **Trial result:** 42 measured assemblies completed. The candidate preserved all emitted assembly graph outputs on the three tested datasets; all performance screens failed under heavy host contention. [Assessment: incubate before featuring](reports/trial/ASSESSMENT.md).

@@ -1,0 +1,11 @@
+{
+  "base_commit": "564dbe33622fee2e8621987b37c0afc2fbbffd76",
+  "changed_at_first_pass": [
+    "AGENTS.md",
+    "DISCOVERY.md",
+    "README.md",
+    "STATUS.md",
+    "discover.json"
+  ],
+  "previous_review_note": "Workspace owner agreed to maintain the local pilot. Weekly capacity undeclared; no public donor intake."
+}

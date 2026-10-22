@@ -1,0 +1,35 @@
+{
+  "base_commit": "564dbe33622fee2e8621987b37c0afc2fbbffd76",
+  "versions": {
+    "AGENTS.md": {
+      "865c1b219593bed7600b6ce7cdaa0edc0a641043d3ab797d3c88252d823f2114": {
+        "snapshot": "research/participation-20261022/historical/865c1b219593bed7600b6ce7cdaa0edc0a641043d3ab797d3c88252d823f2114/AGENTS.md",
+        "current_sha256": "cd9e946f8470300738fff8c68a30bd2d7f487bac9f519f684239b08a5cdabec2"
+      }
+    },
+    "DISCOVERY.md": {
+      "03773877b68f8f7e412de88bd4b7cfc25ab94b6ed4e4f616b66309132002d7b6": {
+        "snapshot": "research/participation-20261022/historical/03773877b68f8f7e412de88bd4b7cfc25ab94b6ed4e4f616b66309132002d7b6/DISCOVERY.md",
+        "current_sha256": "7733b204b37003f39799237b295a431e15d8c020640e641afa7696d7907a8b4c"
+      }
+    },
+    "README.md": {
+      "07b237a46a272e02c5320d0d24039fbd25ba8eee8f28b56d9f7b0dbfa57db183": {
+        "snapshot": "research/participation-20261022/historical/07b237a46a272e02c5320d0d24039fbd25ba8eee8f28b56d9f7b0dbfa57db183/README.md",
+        "current_sha256": "23cb402592b690f4b2376c54f574608b77372a9e9e7886a01ec63625df3d3c24"
+      }
+    },
+    "STATUS.md": {
+      "07eabe2a783012de812a87b43c5d6409c9beee0265ec4e1c1191917d4d40fb47": {
+        "snapshot": "research/participation-20261022/historical/07eabe2a783012de812a87b43c5d6409c9beee0265ec4e1c1191917d4d40fb47/STATUS.md",
+        "current_sha256": "e087cd87dc8d3aaee7cf729b9aa1762dac76bb7a08b8ca89f2f3d2c4e08d463c"
+      }
+    },
+    "discover.json": {
+      "d16eb5a85d818d6832ef3976a672083d606bb719960107384b0c5cff309923a8": {
+        "snapshot": "research/participation-20261022/historical/d16eb5a85d818d6832ef3976a672083d606bb719960107384b0c5cff309923a8/discover.json",
+        "current_sha256": "2273ae4fa1f1ad63686cbdf44cb444620d13c5e962ee9981116b2e347dda35f0"
+      }
+    }
+  }
+}
